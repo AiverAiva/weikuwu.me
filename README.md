@@ -1,6 +1,7 @@
 ### Welcowomw tu my prowofilw ❤️ 
 
-[![weiku's GitHub stats](https://github-readme-stats.vercel.app/api?username=AiverAiva)](https://github.com/anuraghazra/github-readme-stats)__
+[![weiku's GitHub stats](https://github-readme-stats.vercel.app/api?username=AiverAiva)](https://github.com/anuraghazra/github-readme-stats)
+__
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=A&langs_count=8&theme=radical)
 
 <!--
