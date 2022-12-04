@@ -3,12 +3,10 @@
 <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AiverAiva&show_icons=true&icon_color=df648c&text_color=718096&bg_color=00000000&hide_title=true&hide_border=true"/>
 <img align="right" src="https://github-readme-stats.vercel.app/api?username=AiverAiva&show_icons=true&icon_color=df648c&text_color=718096&bg_color=00000000&hide_title=true&hide_border=true"/>
 
-hewo im weiku, a studen from Taiwan
+hewo im weiku, a student from Taiwan
 
-* My site：[weikuwu.ga](https://weikuwu.ga)
-
-* AiverAiva / Channel: [weikuwu]([https://twitter.com/CattusGlavo](https://www.youtube.com/channel/UCuER7v8bBXWcgDQYhP0sdjA))
-* AiverAiva / Discord: AiverAiva#1234
+ 📫 How to reach me: 
+* AiverAiva#1234
 
 if u think my projects are owo please drop a star <3
 
@@ -24,7 +22,7 @@ Here are some ideas to get you started:
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about ...
-- 📫 How to reach me: ...
+-
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
