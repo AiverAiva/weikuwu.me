@@ -12,11 +12,8 @@ hewo im weiku, a studen from Taiwan
 
 if u think my projects are owo please drop a star <3
 
-
-
-These are the languages that I used the most.
 </br>
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=A&langs_count=8&theme=radical"/>
+<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AiverAiva&show_icons=true&icon_color=df648c&text_color=718096&bg_color=00000000&hide_title=true&hide_border=true"/>
 
 <!--
 **WeiKuOuO/WeiKuOuO** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
