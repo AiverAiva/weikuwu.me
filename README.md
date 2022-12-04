@@ -6,9 +6,8 @@
 hewo im weiku, a studen from Taiwan
 
 * My site：[weikuwu.ga](https://weikuwu.ga)
-
-* AiverAiva / Channel: [weikuwu](https://www.youtube.com/channel/UCuER7v8bBXWcgDQYhP0sdjA)
-* AiverAiva / Discord: AiverAiva#1234
+* My channel: [weikuwu](https://www.youtube.com/channel/UCuER7v8bBXWcgDQYhP0sdjA)
+* My discord: AiverAiva#1234
 
 if u think my projects are owo please drop a star <3
 
