@@ -1,8 +1,16 @@
 ### Welcowomw tu my prowofilw ❤️ 
 
-<img align="right" src="https://github-readme-stats.vercel.app/api?username=AiverAiva&show_icons=true&icon_color=CE1D2D&text_color=df648c&bg_color=00000000&hide_title=true&hide_border=true"/>
+<img align="right" src="https://github-readme-stats.vercel.app/api?username=AiverAiva&show_icons=true&icon_color=df648c&text_color=718096&bg_color=00000000&hide_title=true&hide_border=true"/>
 
-<br />
+
+hewo im weiku, a studen from Taiwan
+
+* My site：[weikuwu.ga](https://weikuwu.ga)
+
+* AiverAiva / Channel: [weikuwu]([https://twitter.com/CattusGlavo](https://www.youtube.com/channel/UCuER7v8bBXWcgDQYhP0sdjA))
+* AiverAiva / Discord: AiverAiva#1234
+
+if u think my projects are owo please drop a star <3
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=A&langs_count=8&theme=radical)
 
 <!--
