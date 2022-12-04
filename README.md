@@ -11,6 +11,10 @@ hewo im weiku, a studen from Taiwan
 * AiverAiva / Discord: AiverAiva#1234
 
 if u think my projects are owo please drop a star <3
+
+
+
+These are the languages that I used the most.
 </br>
 <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=A&langs_count=8&theme=radical"/>
 
