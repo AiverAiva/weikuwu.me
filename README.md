@@ -9,7 +9,7 @@ hewo im weiku, a student from Taiwan
 * My channel: [weikuwu](https://www.youtube.com/channel/UCuER7v8bBXWcgDQYhP0sdjA)
 * My discord: AiverAiva#1234
 
-if u think my projects are owo please drop a star <3
+if u like my repos please drop a star <3
 
 
 <!--
