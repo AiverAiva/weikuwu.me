@@ -5022,4 +5022,7 @@
   .bxl-zoom:before {
     content: "\eedb";
   }
+  .bxl-osu:before {
+    content: "\eedc";
+  }
   
