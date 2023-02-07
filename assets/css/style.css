@@ -284,6 +284,7 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/home-banner.png") top right no-repeat;
   background-size: cover;
   position: relative;
+  -webkit-text-stroke: 0.2px #fafafa
 }
 
 @media (min-width: 992px) {
