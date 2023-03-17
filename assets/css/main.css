@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 56px;
   }
   .nav-menu a span, .nav-menu a:focus span {
-    display: none;
+    width: 100%; 
     color: #fff;
   }
 }
@@ -212,6 +212,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a:hover span, .nav-menu .active span, .nav-menu .active:focus span, .nav-menu li:hover > a span {
   color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
 }
 
 .nav-menu a:hover, .nav-menu li:hover > a {
@@ -220,6 +222,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover span, .nav-menu li:hover > a span {
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
   display: block;
 }
 
