@@ -201,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .nav-menu a span, .nav-menu a:focus span {
     width: 100%; 
-    color: #fff;
+    color: #f2f3f5;
   }
 }
 
