@@ -15,9 +15,9 @@
 </template>
 
 <script>
-  import { Chart, RadarController, CategoryScale, PointElement, LineElement, Tooltip, Legend, RadialLinearScale } from 'chart.js';
+  import { Chart, RadarController, PointElement, LineElement, Tooltip, Legend, RadialLinearScale } from 'chart.js/auto';
 
-  Chart.register(RadarController, CategoryScale, PointElement, LineElement, Tooltip, Legend, RadialLinearScale);
+  Chart.register(RadarController, PointElement, LineElement, Tooltip, Legend, RadialLinearScale);
 
   export default {
     mounted() {
@@ -42,14 +42,10 @@
           labels: ['Python', 'JavaScript', 'Kotlin', 'C++', "Rust"],
           datasets: [
             {
-              // label: '',
               data: [70, 74, 55, 66, 38],
-              // pointRadius: 1,
-              backgroundColor: 'rgba(75, 192, 192, 0.4)', //point color
+              backgroundColor: 'rgba(255, 192, 192, 0.4)', //point color
               borderColor: 'rgba(255, 192, 192, 1)', //line color
               pointBackgroundColor: 'rgba(255, 192, 192, 1)', //color inside the point\
-              // hitRadius: 5,
-              // pointBorderColor: '#fff', //color of the boarder of the point
               pointHoverBackgroundColor: '#fff',
               pointHoverBorderColor: 'rgba(255, 192, 192, 1)',
             },
@@ -78,32 +74,10 @@
           plugins: {
             legend: {
               display: false
-              // position: 'bottom',
-              // labels: {
-              //   generateLabels: function(chart) {
-              //     const original = Chart.overrides[chart.config.type].plugins.legend.labels.generateLabels;
-              //     const labels = original(chart);
-
-              //     labels.forEach(function(label) {
-              //       label.pointStyle = 'none';
-              //     });
-
-              //     return labels;
-              //   },
-              // labels: {
-              //   usePointStyle: "none",
-              //   // point: {
-              //   //   display: false,
-              //   // },
-              //   // },
-              // },
             },  
             tooltip: {
-              // enabled: false,
-              // external: false,
               backgroundColor: 'rgba(35, 21, 34, 0.8)',
               titleColor: '#fff',
-              // bodyColor: '#fff',
               padding: 10,
               displayColors: false,
               titleMarginBottom: 0, 
