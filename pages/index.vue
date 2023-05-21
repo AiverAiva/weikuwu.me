@@ -74,7 +74,7 @@
           this.activeSection = 'hero'
         } else if (this.isScrolledIntoView(skillsets)) {
           this.activeSection = 'skillsets'
-        }
+        } 
       },
       isScrolledIntoView(el) {
         const rect = el.getBoundingClientRect()
