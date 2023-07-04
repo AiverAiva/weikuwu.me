@@ -5,7 +5,7 @@
         <p>i <span class="typed" ref="text"></span><span class="cursor">|</span></p>
         <div class="social-links">
             <a class="discord">
-            <Tippy content="AiverAiva#1234" trigger="click" :allowHTML="true">
+            <Tippy content="AiverAiva" trigger="click" :allowHTML="true">
                 <i class="bx bxl-discord"></i>
             </Tippy>
             </a>
