@@ -350,7 +350,21 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
   }
 }
-
+/* ------------- just for testing ------------- */
+@media (max-width: 992px) {
+  #skillsets {
+    text-align: center;
+  }
+  /* #hero h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  #hero p {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 24px;
+  } */
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
