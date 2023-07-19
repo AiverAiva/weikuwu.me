@@ -6,7 +6,7 @@
 hewo im weiku, a student, full stack developer from Taiwan
 
 * My site：[weikuwu.me](https://weikuwu.me)
-* My discord: AiverAiva#1234
+* My discord: @aiveraiva
 
 if u like my repos please drop a star <3
 
