@@ -12,9 +12,9 @@ export default defineNuxtConfig({
     modules: [
       // 'vue-tippy/nuxt'
     ],
-    // plugins: [
-    //   { src: '~/plugins/vue-tippy', mode: 'client' }
-    // ],
+    plugins: [
+      { src: "@/plugins/aos", ssr: false, mode: "client" }
+    ],
     postcss: {
         plugins: {
           tailwindcss: {},

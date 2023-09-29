@@ -2,12 +2,12 @@
     <div id="hero" class="flex flex-col justify-center">
         <div class="container" data-aos="zoom-in" data-aos-delay="100">
         <h1>AiverAiva</h1>
-        <p>i <span class="typed" ref="text"></span><span class="cursor">|</span></p>
+        <p>i <TypedText :content="strings" /></p>
         <div class="social-links">
             <a class="discord">
-            <Tippy content="AiverAiva" trigger="click" :allowHTML="true">
-                <i class="bx bxl-discord"></i>
-            </Tippy>
+                <Tippy content="@aiveraiva" trigger="click" :allowHTML="true">
+                    <i class="bx bxl-discord"></i>
+                </Tippy>
             </a>
             <a href="https://github.com/AiverAiva" class="github"><i class="bx bxl-github"></i></a>
             <a href="https://steamcommunity.com/id/AiverAiva/" class="steam"><i class='bx bxl-steam'></i></a>
@@ -17,55 +17,27 @@
     </div>
 </template>
   
+
+
 <script>
     import { Tippy } from 'vue-tippy'
     import 'tippy.js/dist/tippy.css';
     import 'tippy.js/themes/translucent.css';
 
+    import TypedText from '~/components/TypedText.vue';
+
     export default {
         name: 'hero',
         components: { 
-            Tippy
+            Tippy,
+            TypedText
         },
         data() {
             return {
                 strings: ["play osu", "smash keyboard for rainbow sentences"],
-                typeSpeed: 100,
-                deleteSpeed: 50,
-                waitTime: 2000,
-                currentIndex: 0,
-                currentText: "",
-                deleting: false,
             };
-        },
-        mounted() {
-            this.startTyping();
-        },
-        methods: {
-            async startTyping() {
-                while (true) {
-                if (!this.deleting) {
-                    if (this.currentText.length < this.strings[this.currentIndex].length) {
-                    this.currentText += this.strings[this.currentIndex][this.currentText.length];
-                    this.$refs.text.textContent = this.currentText;
-                    await new Promise((resolve) => setTimeout(resolve, this.typeSpeed));
-                    } else {
-                    this.deleting = true;
-                    await new Promise((resolve) => setTimeout(resolve, this.waitTime));
-                    }
-                } else {
-                    if (this.currentText.length > 0) {
-                    this.currentText = this.currentText.slice(0, -1);
-                    this.$refs.text.textContent = this.currentText;
-                    await new Promise((resolve) => setTimeout(resolve, this.deleteSpeed));
-                    } else {
-                    this.deleting = false;
-                    this.currentIndex = (this.currentIndex + 1) % this.strings.length;
-                    }
-                }
-                }
-            },
         },
     }
     
 </script>
+
