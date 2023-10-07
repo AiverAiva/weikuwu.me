@@ -4,8 +4,8 @@
     <nav id="navbar" class="navbar nav-menu">
       <ul>
         <li><a href="#hero" :class="{active: activeSection === 'hero'}"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <!-- <li><a href="#skillsets" :class="{active: activeSection === 'skillsets'}"><i class='bx bx-id-card'></i><span>Skillsets</span></a></li> -->
-        <!-- <li><a href="#games" :class="{active: activeSection === 'games'}"><i class='bx bx-joystick'></i><span>Games</span></a></li> -->
+        <!-- <li><a href="#skillsets" :class="{active: activeSection === 'skillsets'}"><i class='bx bx-id-card'></i><span>Skillsets</span></a></li>
+        <li><a href="#games" :class="{active: activeSection === 'games'}"><i class='bx bx-joystick'></i><span>Games</span></a></li> -->
       </ul>
     </nav>
   </header>

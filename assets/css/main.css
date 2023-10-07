@@ -315,6 +315,7 @@ body {
     font-size: 24px;
     display: inline-block;
     color: #45505b;
+    fill: #45505b;
     line-height: 1;
     margin-right: 20px;
     transition: 0.3s;
@@ -322,8 +323,13 @@ body {
   
   #hero .social-links a:hover {
     color: #ffb3c6;
+    fill: #ffb3c6;
   }
   
+  #hero #osu-icon {
+    scale: 0.1;
+  }
+
   @media (max-width: 992px) {
     #hero {
       text-align: center;
