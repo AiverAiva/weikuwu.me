@@ -1,0 +1,1 @@
+import{h as e,o as s,b as o,e as t}from"./entry.37b36883.js";const c={name:"games",components:{}},n={id:"games",class:"flex flex-col justify-center"},a=t("div",{class:"container"},null,-1),r=[a];function _(i,d,l,f,m,p){return s(),o("div",n,r)}const h=e(c,[["render",_]]);export{h as default};
