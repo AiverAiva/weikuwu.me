@@ -63,3 +63,15 @@
   }
 </script>
 
+<script setup>
+  useSeoMeta({
+    url: 'https://weikuwu.me',
+    title: 'AiverAiva - Average qwqness spreader',
+    ogTitle: 'AiverAiva - Average qwqness spreader',
+    description: 'I\'m a student from Taiwan. :3',
+    ogDescription: 'I\'m a student from Taiwan. :3',
+    color: "#ffb3c6",
+    ogImage: '/img/thumbnail.png',
+    // twitterCard: 'summary_large_image',
+  })
+</script>
