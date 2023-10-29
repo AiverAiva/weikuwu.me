@@ -3,10 +3,9 @@
 export default defineNuxtConfig({
   css: ['~/assets/css/main.css', 'boxicons/css/boxicons.min.css'],
   app: {
-    buildAssetsDir: '/src/',
     head: {
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/src/assets/img/icons/favicon.ico' }
+        { rel: 'icon', type: 'image/x-icon', href: '/img/icons/favicon.ico' }
       ]
       //   link: [
       //     { rel: 'stylesheet', href: 'bootstrap/dist/css/bootstrap.min.css' },
