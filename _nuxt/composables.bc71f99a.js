@@ -1,1 +1,0 @@
-import{r as o,O as c,P as p,Q as d,R as f,D as l}from"./entry.259a34a2.js";const m=(e,t)=>{const a=o({});return c(()=>{const s=d(e),{title:u,titleTemplate:n,...r}=s;a.value={title:u,titleTemplate:n,meta:f(r)}}),p(a,t)};function H(e,t){return l()._useHead(e,t)}const M=e=>m(e);export{H as a,M as u};
