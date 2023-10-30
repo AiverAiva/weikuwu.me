@@ -177,7 +177,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 56px;
   width: 100%;
   overflow: hidden;
-  transition: 0.3s;
 }
 
 .nav-menu a i, .nav-menu a:focus i {
@@ -206,15 +205,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a:hover span, .nav-menu .active span, .nav-menu .active:focus span, .nav-menu li:hover > a span {
   color: #fff;
+  /* opacity: 0;
+  transition: opacity 0.2s ease-out; */
 }
 
 .nav-menu a:hover, .nav-menu li:hover > a {
   width: 100%;
-  color: #fff;
+  color: #fff;  
 }
 
 .nav-menu a:hover span, .nav-menu li:hover > a span {
   display: block;
+  /* opacity: 1;
+  transition: opacity 0.2s ease-out; */
 }
 
 /**
@@ -266,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/home-banner.png") top right no-repeat;
+  background: url("/img/home-banner-light.png") top right no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1240,4 +1243,40 @@ h1, h2, h3, h4, h5, h6 {
 
 .avatar--full {
   border-radius: 0
+}
+
+/* themeswitcher*/
+
+.theme-switcher-button {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dark-mode-button {
+  background-color: #2d3748; /* Dark mode button background color */
+  color: #ffffff; /* Dark mode button text color */
+}
+
+.dark-mode-button:hover {
+  background-color: #3B4556; /* Dark mode button background color */
+}
+
+.light-mode-button {
+  background-color: #ffffff; /* Light mode button background color */
+  color: #2d3748; /* Light mode button text color */
+}
+
+.light-mode-button:hover {
+  background-color: #f1f1f1; /* Light mode button background color */
+}
+
+.dark-mode {
+  --background-color: #1e1e1e; 
+  --text-color: #ffffff;
 }
