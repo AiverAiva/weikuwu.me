@@ -1,1 +1,0 @@
-import{j as e,o as s,b as o,e as t}from"./entry.03ccbca1.js";const c={name:"games",components:{}},n={id:"games",class:"flex flex-col justify-center"},a=t("div",{class:"container"},null,-1),r=[a];function _(i,d,l,f,m,p){return s(),o("div",n,r)}const x=e(c,[["render",_]]);export{x as default};
