@@ -1,34 +1,48 @@
 <template>
   <div id="about" class="flex flex-col flex-grow pt-16 pb-20 justify-center bg-gradient-to-b from-slate-50 to-pink-100">
     <!-- <div class="flex items-center"> -->
-    <div class="container mx-auto md:px-20 px-5">
+    <div class="container mx-auto px-10 md:px-20">
       <!-- start from here -->
       <div class="flex flex-col md:flex-row gap-5 md:gap-10">
         <div>
           <h1 class="text-4xl font-bold text-center">About Me</h1>
-          <div class="py-6 flex flex-col gap-5 md:gap-10">
+          <!-- <div class="py-6 flex flex-col gap-5 md:gap-10">
             <div class="flex flex-col md:flex-row gap-5 md:gap-10">
-
+              123
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
-      <!-- <div class="flex flex-col md:flex-row gap-5 md:gap-10">
-        <Card title="Languages">
+      <!-- md:gap-5 -->
+      <div class="flex flex-col md:flex-row gap-5 ">
+        <div class="w-full md:w-1/3">
+          <Card title="Languages">
+            <canvas ref="polygonCanvas" class="w-full h-full"></canvas>
+            <!-- <div class="flex flex-col gap-2 mt-3">
+              <div class="w=1/2">
+
+              </div>
+              
+            </div> -->
+          </Card>
+        </div>
+        <Card title="AAAA">
           <div class="flex flex-col gap-2 mt-3">
-            bbb
+            aaaaaaaaaaaaaaaaaa
           </div>
         </Card>
-        <Card title="Tools">
-          <div class="flex flex-col gap-2 mt-3">
-            aaaa
-          </div>
-        </Card>
+        <!-- <div class="w-2/3" >
+          
+        </div> -->
+
+
       </div>
 
-      <div class="flex flex-col md:flex-row gap-5 md:gap-10">
+      <!-- <div class="flex flex-col md:flex-row gap-5 md:gap-y-10">
         <Card class="p-4">
-          <ClientImage :src="'https://github-readme-stats.vercel.app/api?username=AiverAiva&show_icons=true&theme=dracula&border_radius=8&icon_color=df648c&text_color=718096&hide_title=true&hide_border=true&bg_color=none'" class="rounded-xl" />
+          <ClientImage
+            :src="'https://github-readme-stats.vercel.app/api?username=AiverAiva&show_icons=true&theme=dracula&border_radius=8&icon_color=df648c&text_color=718096&hide_title=true&hide_border=true&bg_color=none'"
+            class="rounded-xl" />
         </Card>
         <Card class="p-4">
           <div class="flex items-center h-full">
@@ -75,8 +89,22 @@ export default {
   },
   mounted() {
     this.createChart();
+    // window.addEventListener('resize', this.resizeCanvas);
+    // this.resizeCanvas();
   },
+  // beforeDestroy() {
+  //   window.removeEventListener('resize', this.resizeCanvas);
+  // },
+
   methods: {
+    // resizeCanvas() {
+    //   const canvas = this.$refs.polygonCanvas;
+    //   const card = canvas.parentElement;
+    //   canvas.width = card.clientWidth;
+    //   canvas.height = card.clientHeight;
+
+    //   this.createChart()
+    // },
     createChart() {
       const canvas = this.$refs.polygonCanvas;
       if (!canvas) {
@@ -150,8 +178,8 @@ export default {
 </script>
   
 <style>
-canvas {
+/* canvas {
   max-width: 100%;
   height: auto;
-}
+} */
 </style>
