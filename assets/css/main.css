@@ -1259,24 +1259,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dark-mode-button {
-  background-color: #2d3748; /* Dark mode button background color */
-  color: #ffffff; /* Dark mode button text color */
+  background-color: #2d3748; 
+  color: #ffffff;
 }
 
 .dark-mode-button:hover {
-  background-color: #3B4556; /* Dark mode button background color */
+  background-color: #3B4556; 
 }
 
 .light-mode-button {
-  background-color: #ffffff; /* Light mode button background color */
-  color: #2d3748; /* Light mode button text color */
+  background-color: #ffffff; 
+  color: #2d3748; 
 }
 
 .light-mode-button:hover {
-  background-color: #f1f1f1; /* Light mode button background color */
-}
-
-.dark-mode {
-  --background-color: #1e1e1e; 
-  --text-color: #ffffff;
+  background-color: #f1f1f1; 
 }

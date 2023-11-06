@@ -7,7 +7,7 @@
   
 <script>
     export default {
-        name: 'games',
+        name: 'GamePlaceholder',
         components: { 
         },
     }

@@ -2,19 +2,19 @@
   <CustomHeader />
 
   <Hero id="hero"/>
-  <SkillPlaceholder />
+  <About />
 </template>
 
 <script>
   import Hero from './Hero.vue'
-  import SkillPlaceholder from './SkillPlaceholder.vue';
+  import About from './About.vue';
 
   import CustomHeader from '~/components/CustomHeader.vue';
 
   export default {
     name: 'index',
     components: { 
-      SkillPlaceholder,
+      About,
       Hero,
     },
   }
