@@ -1,1 +1,0 @@
-import{a as e,o,b as s,e as t}from"./entry.99300417.js";const c={name:"GamePlaceholder",components:{}},a={id:"games",class:"flex flex-col justify-center"},n=t("div",{class:"container"},null,-1),r=[n];function l(_,d,i,f,m,p){return o(),s("div",a,r)}const u=e(c,[["render",l]]);export{u as default};
