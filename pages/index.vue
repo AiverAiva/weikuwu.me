@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import Hero from './Hero.vue'
-  import About from './About.vue';
+  import Hero from '~/components/placeholder/Hero.vue'
+  import About from '~/components/placeholder/About.vue';
 
   import CustomHeader from '~/components/CustomHeader.vue';
 
