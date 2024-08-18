@@ -1,9 +1,10 @@
 <template>
-  <!-- <CustomHeader /> -->
-
-  <Hero id="hero" />
-  <About />
-  <!-- <PostsPlaceholder /> -->
+  <Hero />
+  <div class="bg-gradient-to-b from-slate-50 to-pink-200">
+    <About />
+    <PostsPlaceholder />
+  </div>
+  
   <!-- <DiaryPlaceholder /> -->
   
   <!-- <Experience /> -->

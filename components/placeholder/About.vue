@@ -1,21 +1,16 @@
 <template>
-  <div id="about" class="flex flex-col flex-grow pt-16 pb-20 justify-center bg-gradient-to-b from-slate-50 to-pink-100">
+  <div id="about" class="flex flex-col flex-grow pt-16 pb-20 justify-center">
     <!-- <div class="flex items-center"> -->
     <div class="container mx-auto px-10 md:px-20">
       <!-- start from here -->
-      <div class="flex flex-col md:flex-row gap-5 md:gap-10">
+      <div class="flex flex-col md:flex-row gap-5 mb-4 md:gap-10">
         <div>
           <h1 class="text-4xl font-bold text-center">About Me</h1>
-          <!-- <div class="py-6 flex flex-col gap-5 md:gap-10">
-            <div class="flex flex-col md:flex-row gap-5 md:gap-10">
-              123
-            </div>
-          </div> -->
         </div>
       </div>
       <!-- md:gap-5 -->
       <div class="flex flex-col md:flex-row gap-5 ">
-        <div class="w-full md:w-1/3">
+        <div class="w-full md:w-1/3 ">
           <Card title="Languages">
             <canvas ref="polygonCanvas" class="w-full h-full"></canvas>
             <!-- <div class="flex flex-col gap-2 mt-3">
@@ -26,9 +21,9 @@
             </div> -->
           </Card>
         </div>
-        <Card title="AAAA">
+        <Card title="依綾超可愛">
           <div class="flex flex-col gap-2 mt-3">
-            aaaaaaaaaaaaaaaaaa
+            <img src="https://cdn.discordapp.com/emojis/1227305381760340049.png?size=96&quality=lossless" alt="catbo"  class="w-24 h-24">
           </div>
         </Card>
         <!-- <div class="w-2/3" >
@@ -55,18 +50,6 @@
 
       <!-- <div class="flex flex-col md:flex-row gap-5 md:gap-10"> -->
 
-      <Card title="I suck at coding qwq">
-        and i hate tailwind css i fuckup everything so hard
-        <!-- <div class="w-3/2 mx-auto">
-          <h2 class="text-5xl font-bold mb-4 text-left">uwu</h2>
-          <p class="mb-8 text-left">owo</p>
-        </div> -->
-        <!-- <div class="w-3/1 mx-auto">
-              <canvas ref="polygonCanvas" class="w-full" style="height: 180px;"></canvas>
-            </div> -->
-
-      </Card>
-
 
 
       <!-- </div> -->
@@ -84,9 +67,9 @@ import StackedCard from '~/components/StackedCard.vue'
 Chart.register(RadarController, PointElement, LineElement, Tooltip, Legend, RadialLinearScale);
 
 export default {
-  components: {
-    Card
-  },
+  // components: {
+  //   Card
+  // },
   mounted() {
     this.createChart();
     // window.addEventListener('resize', this.resizeCanvas);
