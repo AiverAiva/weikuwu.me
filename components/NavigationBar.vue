@@ -28,6 +28,7 @@ export default {
         const sections = ref([
             { id: 'hero', name: 'Home', icon: 'bx bx-home' },
             { id: 'about', name: 'About', icon: 'bx bx-id-card' },
+            { id: 'games', name: 'Games', icon: 'bx bx-joystick' },
             { id: 'posts', name: 'Posts', icon: 'bx bx-align-left' },
         ]);
 

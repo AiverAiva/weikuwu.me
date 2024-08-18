@@ -2,6 +2,7 @@
   <Hero />
   <div class="bg-gradient-to-b from-slate-50 to-pink-200">
     <About />
+    <GamePlaceholder />
     <PostsPlaceholder />
   </div>
   
