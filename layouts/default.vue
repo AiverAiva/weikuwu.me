@@ -1,16 +1,10 @@
 <template>
-    <MobileNavBar />
-    <div id="header" class="flex flex-col justify-center">
+    <div>
         <NavigationBar />
+        <NuxtPage />
     </div>
 </template>
-  
-<script>
-import MobileNavBar from '~/components/MobileNavBar.vue';
-import NavigationBar from '~/components/NavigationBar.vue';
 
-</script>
-  
 <script setup>
 useSeoMeta({
     url: 'https://weikuwu.me',
@@ -18,9 +12,8 @@ useSeoMeta({
     ogTitle: 'AiverAiva',
     description: 'I\'m a student from Taiwan :3',
     ogDescription: 'I\'m a student from Taiwan :3',
-    theme_color: "#ffb3c6",
+    theme_color: "#ffb3c6",      
     ogImage: '/img/thumbnail.png',
     // twitterCard: 'summary_large_image',
 })
 </script>
-  

@@ -13,8 +13,16 @@ export default defineNuxtConfig({
       //   script: [{ src: '~/assets/js/main.js' }],
     },
   },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
   modules: [
     // 'vue-tippy/nuxt'
+    '@nuxt/content',
+    "@nuxt/image"
   ],
   plugins: [
     { src: "@/plugins/aos", ssr: false, mode: "client" }

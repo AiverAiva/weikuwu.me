@@ -1,53 +1,94 @@
-
 <template>
-    <nav id="navbar" class="navbar nav-menu">
-        <ul>
-            <li><a :class="{ active: activeSection === 'hero' }" @click="scrollToSection('hero')"><i class="bx bx-home"></i>
-                    <span>Home</span></a></li>
-            <li><a :class="{ active: activeSection === 'about' }" @click="scrollToSection('about')"><i
-                        class='bx bx-id-card'></i><span>About</span></a></li>
-        </ul>
-    </nav>
+    <!-- mobileview -->
+    <button @click="toggleMobileNav" class="mobile-nav-toggle">
+        <i :class="iconClass"></i>
+    </button>
+    <!-- desktopview -->
+    <div id="header" class="flex flex-col justify-center">
+        <nav id="navbar" class="navbar nav-menu ">
+            <ul>
+                <li v-for="section in sections" :key="section.id">
+                    <a :class="{ active: activeSection === section.id }" @click="scrollToSection(section.id)">
+                        <i :class="section.icon"></i>
+                        <span>{{ section.name }}</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </template>
-  
+
 <script>
+import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue';
+
 export default {
-    data() {
-        return {
-            activeSection: 'hero',
-            sectionIds: ['hero', 'about'],
+    setup() {
+        const isMobileNavActive = ref(false);
+        const activeSection = ref('hero');
+        const sections = ref([
+            { id: 'hero', name: 'Home', icon: 'bx bx-home' },
+            { id: 'about', name: 'About', icon: 'bx bx-id-card' },
+        ]);
+
+        const toggleMobileNav = () => {
+            isMobileNavActive.value = !isMobileNavActive.value;
         };
-    },
-    mounted() {
-        window.addEventListener('scroll', this.handleScroll);
-    },
-    beforeDestroy() {
-        window.removeEventListener('scroll', this.handleScroll);
-    },
-    methods: {
-        handleScroll() {
-            for (const sectionId of this.sectionIds) {
-                const section = document.querySelector(`#${sectionId}`);
-                if (this.isScrolledIntoView(section)) {
-                    this.activeSection = sectionId;
+
+        watch(isMobileNavActive, (newValue) => {
+            if (newValue) {
+                document.body.classList.add('mobile-nav-active');
+            } else {
+                document.body.classList.remove('mobile-nav-active');
+            }
+        });
+
+        const iconClass = computed(() => {
+            return isMobileNavActive.value ? 'bx bx-x' : 'bx bx-list-ul';
+        });
+
+        const handleScroll = () => {
+            for (const section of sections.value) {
+                const el = document.querySelector(`#${section.id}`);
+                if (isScrolledIntoView(el)) {
+                    activeSection.value = section.id;
                     break;
                 }
             }
-        },
-        isScrolledIntoView(el) {
+        };
+
+        const isScrolledIntoView = (el) => {
             if (!el) return false;
             const rect = el.getBoundingClientRect();
             return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
-        },
-        scrollToSection(section) {
-            const targetElement = document.querySelector(`#${section}`);
+        };
+
+        const scrollToSection = (sectionId) => {
+            const targetElement = document.querySelector(`#${sectionId}`);
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                });
-                this.activeSection = section;
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+                activeSection.value = sectionId;
+                // Close the mobile nav after clicking a link
+                isMobileNavActive.value = false;
             }
-        },
+        };
+
+        onMounted(() => {
+            window.addEventListener('scroll', handleScroll);
+        });
+
+        onBeforeUnmount(() => {
+            window.removeEventListener('scroll', handleScroll);
+        });
+
+        return {
+            isMobileNavActive,
+            toggleMobileNav,
+            iconClass,
+            activeSection,
+            sections,
+            handleScroll,
+            scrollToSection,
+        };
     },
 };
 </script>
