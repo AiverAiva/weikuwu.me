@@ -7,21 +7,19 @@
         </div>
 </template>
 
-<script>
-export default {
-    props: {
-        title: {
-            type: String,
-            default: "Title"
-        },
-        desc: {
-            type: String,
-            default: "Description"
-        },
-        slug: {
-            type: String,
-            default: ""
-        }
+<script setup>
+const props = defineProps({
+    title: {
+        type: String,
+        default: "Title"
     },
-}
+    desc: {
+        type: String,
+        default: "Description"
+    },
+    slug: {
+        type: String,
+        default: ""
+    }
+});
 </script>

@@ -1,31 +1,25 @@
 <template>
   <Hero />
-  <div class="bg-gradient-to-b from-slate-50 to-pink-200">
+  <div class="custom-bg">
     <About />
     <GamePlaceholder />
     <PostsPlaceholder />
   </div>
   
-  <!-- <DiaryPlaceholder /> -->
-  
   <!-- <Experience /> -->
 </template>
 
 <script>
-import Hero from '~/components/placeholder/Hero.vue'
-import About from '~/components/placeholder/About.vue';
-// import Experience from '~/components/placeholder/Experience.vue';
-
-// import CustomHeader from '~/components/CustomHeader.vue';
-// import DiaryPlaceholder from '~~/components/placeholder/DiaryPlaceholder.vue';
-
-// export default {
-  // name: 'index',
-  // components: {
-    // About,
-    // Hero,
-    // DiaryPlaceholder
-    // Experience
-  // },
-// }
 </script>
+
+<style scoped>
+.custom-bg {
+  background: 
+    url('/img/background-pattern.png'), 
+    linear-gradient(to bottom, #f8fafc 0%, #fecdd3 100%);
+  background-repeat: repeat;
+  background-size: auto; /* or specify a size if needed */
+  background-blend-mode:color-burn;
+}
+
+</style>  
