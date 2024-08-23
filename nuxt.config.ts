@@ -5,12 +5,8 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/img/icons/favicon.ico' }
+        { rel: 'icon', type: 'image', href: 'https://crafatar.com/avatars/cd2f08fb-eede-4b88-b1c1-6f3e46007171?size=100' }
       ]
-      //   link: [
-      //     { rel: 'stylesheet', href: 'bootstrap/dist/css/bootstrap.min.css' },
-      //   ],
-      //   script: [{ src: '~/assets/js/main.js' }],
     },
   },
   components: [
@@ -22,7 +18,7 @@ export default defineNuxtConfig({
   modules: [
     // 'vue-tippy/nuxt'
     '@nuxt/content',
-    "@nuxt/image"
+    '@nuxt/image'
   ],
   plugins: [
     { src: "@/plugins/aos", ssr: false, mode: "client" }
