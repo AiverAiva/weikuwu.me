@@ -1,15 +1,18 @@
 <template>
-  <Hero />
-  <div class="custom-bg">
-    <About />
-    <GamePlaceholder />
-    <PostsPlaceholder />
+  <PlaceholderHero />
+  <div class="custom-bg loading-blur">
+    <PlaceholderAbout />
+    <PlaceholderGame />
+    <PlaceholderPosts />
   </div>
   
   <!-- <Experience /> -->
 </template>
 
-<script>
+<script setup>
+definePageMeta({
+  layout: 'home'
+})
 </script>
 
 <style scoped>
@@ -18,8 +21,9 @@
     url('/img/background-pattern.png'), 
     linear-gradient(to bottom, #f8fafc 0%, #fecdd3 100%);
   background-repeat: repeat;
-  background-size: auto; /* or specify a size if needed */
+  background-size: auto;
   background-blend-mode:color-burn;
 }
+
 
 </style>  
