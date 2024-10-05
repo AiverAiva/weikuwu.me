@@ -7,16 +7,15 @@
                 </div>
             </div>
             <h3 v-if="latestPosts.length === 0" class="text-3xl text-center font-sans mb-4 text-gray-800">No Posts Found</h3>
-            <PostContainer v-for="p in latestPosts" v-bind:key="p.slug" :title="p.title" :desc="p.description"
-                :slug="p._path.split('/').pop()" class="mb-4" />
+            <PostContainer v-for="p in latestPosts" v-bind:key="p.slug" :post="p" :slug="p._path.split('/').pop()" class="mb-4" />
             <div v-if="posts.length > 3" class="text-center mt-2">
-                <a href="/posts" class="font-mono text-pink-500 hover:text-pink-700 no-underline">Show More <i class='bx bxs-chevron-down' ></i></a>
+                <a href="/post" class="font-mono text-pink-500 hover:text-pink-700 no-underline">Show More <i class='bx bxs-chevron-down' ></i></a>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-const { data: posts } = await useAsyncData('posts', () => queryContent('/posts').find());
+const { data: posts } = await useAsyncData('post', () => queryContent('/post').find());
 const latestPosts = posts.value.slice(0, 3);
 </script>

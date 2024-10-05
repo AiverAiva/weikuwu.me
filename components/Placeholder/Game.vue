@@ -9,7 +9,8 @@
             <div class="grid grid-cols-1 gap-4">
                 <Card title="osu!">
                     <a href="https://osu.ppy.sh/users/14984648">
-                        <img src="https://osekai.net/profiles/img/banner.svg?id=14984648">
+                        My Profile
+                        <!-- <img src="https://osekai.net/profiles/img/banner.svg?id=14984648"> -->
                     </a>
                 </Card>
             </div>
