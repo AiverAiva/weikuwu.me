@@ -1,19 +1,79 @@
 <template>
-    <div>
-        <NavigationBar />
-        <NuxtPage />
-    </div>
+    <!-- <div class="
+                flex
+                <sm:flex-col
+                justify-between
+                <sm:items-baseline
+                sm:items-center
+                w-full
+              ">
+        <nav class="flex">
+            <ol role="list" class="flex items-center">
+                <li v-for="(crumb, index) in breadcrumbs" :key="index" class="text-left">
+                    <div class="flex items-center">
+                        <span class="mx-2 text-gray-400" v-if="index !== 0">/</span>
+                        <div class="-m-1">
+                            <nuxt-link v-if="crumb.link" :to="crumb.link"
+                                class="rounded-md p-1 ml-3 text-md font-bold font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800">
+                                {{ crumb.name }}
+                            </nuxt-link>
+                            <span v-else
+                                class="rounded-md p-1 text-md font-bold text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800"
+                                aria-current="page">
+                                {{ crumb.name }}
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="h-screen w-screen flex justify-center items-center dark:bg-gray-800">
+            
+        </div>
+    </div> -->
+    <!-- <button onclick="(() => document.body.classList.toggle('dark'))()"
+                class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+                <svg class="fill-violet-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <i class='fill-violet-700 block dark:hidden bx bxs-sun' fill="currentColor" viewBox="0 0 20 20"></i>
+                <svg class="fill-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+            </button> -->
+    <!-- <ButtonBack /> -->
+    <NuxtPage />
+
 </template>
 
 <script setup>
-useSeoMeta({
-    url: 'https://weikuwu.me',
-    title: 'AiverAiva',
-    ogTitle: 'AiverAiva',
-    description: 'I\'m a student from Taiwan :3',
-    ogDescription: 'I\'m a student from Taiwan :3',
-    theme_color: "#ffb3c6",      
-    ogImage: '/img/thumbnail.png',
-    // twitterCard: 'summary_large_image',
-})
+import { useRoute } from 'vue-router';
+const route = useRoute();
+
+const breadcrumbs = computed(() => {
+    const pathArray = route.path.split('/').filter(Boolean);
+
+    return pathArray.map((segment, index) => {
+        const link = `/${pathArray.slice(0, index + 1).join('/')}`;
+
+        return {
+            name: capitalizeFirstLetter(segment),
+            link: index < pathArray.length - 1 ? link : null,
+        };
+    });
+});
+
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
 </script>
+
+<style scoped>
+.mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+</style>
