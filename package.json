@@ -19,6 +19,7 @@
     "@nuxt/content": "^2.13.2",
     "aos": "^2.3.4",
     "boxicons": "^2.1.4",
+    "prismjs": "^1.29.0",
     "vue-chartjs": "^5.2.0",
     "vue-tippy": "^6.0.0"
   }

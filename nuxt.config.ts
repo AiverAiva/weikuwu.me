@@ -12,9 +12,17 @@ export default defineNuxtConfig({
   components: [
     {
       path: '~/components',
-      pathPrefix: false,
+      pathPrefix: true,
     },
   ],
+  // content: {
+  //   highlight: {
+  //       theme: {
+  //           default: "one-dark-pro",
+  //           dark: "github-dark",
+  //       },
+  //   },
+  // },
   modules: [
     // 'vue-tippy/nuxt'
     '@nuxt/content',
