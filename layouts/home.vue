@@ -1,8 +1,5 @@
 <template>
-    <div>
-        <NavigationBar />
-        <NuxtPage />
-    </div>
+    <NuxtPage />
 </template>
 
 <script setup>
@@ -17,3 +14,15 @@ useSeoMeta({
     // twitterCard: 'summary_large_image',
 })
 </script>
+
+<style scoped>
+:global(html, body) {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+:global(html::-webkit-scrollbar) {
+  display: none;
+}
+</style>

@@ -1,4 +1,5 @@
 <template>
+  <NavigationBar />
   <PlaceholderHero />
   <div class="custom-bg loading-blur">
     <PlaceholderAbout />
@@ -24,6 +25,4 @@ definePageMeta({
   background-size: auto;
   background-blend-mode:color-burn;
 }
-
-
 </style>  
