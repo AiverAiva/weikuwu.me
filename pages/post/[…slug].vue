@@ -43,7 +43,7 @@
             <h2 class="font-semibold text-2xl">
               {{ doc.title }}
             </h2>
-            <div class="flex items-center font-mono">
+            <div v-if="doc.author" class="flex items-center font-mono">
               <span class="text-sm mr-2">by:</span>
               <div v-for="(author, index) in doc.author" :key="index">
                 <PostAuthor :author=author />
@@ -56,7 +56,7 @@
           <div class="mt-6 flex border-t border-gray-900/5 pt-6" />
           <div class="h-2px my-3 bg-warm-gray-100 dark:bg-dark-200 w-full"></div>
 
-          <ContentRendererMarkdown :value="doc" class="prose"/>
+          <ContentRendererMarkdown :value="doc" class="prose" :components="components"/>
         </div>
 
 
@@ -67,7 +67,7 @@
           <ul class="text-xs text-warm-gray-400">
             <li v-for="link in doc.reference" :key="link">
               <a :href="link" rel="noreferrer" target="_blank" class="inline-flex items-center">
-                <IconLink class="mr-1"></IconLink>
+                <!-- <IconLink class="mr-1"></IconLink> -->
                 {{ link }}
               </a>
             </li>
@@ -107,14 +107,21 @@
 </template>
 
 <script setup>
-import 'prismjs/themes/prism.css'; 
-import Prism from 'prismjs';
-import 'prismjs/components/prism-javascript';
+// import 'prismjs/themes/prism.css'; 
+// import Prism from 'prismjs';
+// import 'prismjs/components/prism-javascript';
+import { PostGithubRepo } from '#components';
 
 const { params } = useRoute();
 const { data: doc } = await useAsyncData('document', () => queryContent(`/post/${params.slug}`).findOne());
-onMounted(() => {
-  Prism.highlightAll(); // Highlights all code blocks on mount
-});
+// onMounted(() => {
+//   Prism.highlightAll(); // Highlights all code blocks on mount
+// });
+
+const components = {
+  'PostGithubRepo': PostGithubRepo
+}
 </script>
+
+
 
