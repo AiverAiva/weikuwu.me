@@ -10,27 +10,25 @@
       </div>
       <!-- md:gap-5 -->
       <div class="flex flex-col md:flex-row gap-5 ">
-        <div class="w-full md:w-1/3 ">
-          <Card title="Languages">
-            <!-- <canvas ref="polygonCanvas" class="w-full h-full"></canvas> -->
-            <!-- <div class="flex flex-col gap-2 mt-3">
-              <div class="w=1/2">
-
-              </div>
-              
-            </div> -->
-          </Card>
+        <div class="w-full md:w-1/2">
+          <Card title="Me">I am in touch with programming since I was 11 and have self-taught a
+            multitude of languages and frameworks since then.</Card>
         </div>
-        <Card title="依綾超可愛">
-          <div class="flex flex-col gap-2 mt-3">
-            <img src="https://cdn.discordapp.com/emojis/1227305381760340049.png?size=96&quality=lossless" alt="catbo"  class="w-24 h-24">
+
+        <Card title="Tech Stack">
+          <div class="flex flex-col md:flex-row gap-5 mt-4">
+            <div class="bg-red-100 rounded-xl text-center p-1 w-32">Backend</div>
+            <div class="text-center p-1">Express, Flask, Django</div>
+          </div>
+          <div class="flex flex-col md:flex-row gap-5 mt-2">
+            <div class="bg-red-100 rounded-xl text-center p-1 w-32">Frontend</div>
+            <div class="text-center p-1">Vue, React</div>
+          </div>
+          <div class="flex flex-col md:flex-row gap-5 mt-2">
+            <div class="bg-red-100 rounded-xl text-center p-1 w-32">Database</div>
+            <div class="text-center p-1">MongoDB, PostgreSQL</div>
           </div>
         </Card>
-        <!-- <div class="w-2/3" >
-          
-        </div> -->
-
-
       </div>
 
       <!-- <div class="flex flex-col md:flex-row gap-5 md:gap-y-10">
