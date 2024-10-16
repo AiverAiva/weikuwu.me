@@ -6,30 +6,41 @@
         top-0
         left-0
         z-10
-        bg-warm-gray-100 bg-opacity-50
-        dark:bg-dark-900 dark:bg-opacity-50
+        bg-gray-200 
+        bg-opacity-50
+        dark:bg-slate-900
         flex
         justify-center
         items-center
+        duration-150
       ">
     <!-- @click.self="$router.back()" -->
     <!-- backdrop-filter backdrop-blur-sm -->
+    <ThemeSwitcher />
     <div class="
           w-full
           max-w-screen-lg
           overflow-y-auto
           bg-white
-          dark:bg-dark-400
+          dark:bg-slate-800
           p-6
           mx-4
           rounded-xl
           shadow-lg
+          duration-150
         " style="max-height: calc(100vh - 210px)">
-      <ButtonBack />
+      <div
+        class="block z-50 duration-150 backdrop-blur-esm rounded-lg hover:drop-shadow-md sticky-section-header top-0 section-colors"
+        style="position: sticky;">
+        <div
+          class="sm:inline-block duration-150 opacity-50 hover:opacity-100 cursor-pointer w-full rounded-lg stuck bg-white dark:bg-slate-800 bg-opacity-75 dark:bg-opacity-75">
+          <ButtonBack />
+        </div>
+      </div>
 
       <img v-if="doc.thumbnail" :src="doc.thumbnail" alt="Thumbnail" class="w-full h-40 object-cover rounded-lg mb-8" />
       <img v-else src="/img/placeholder.jpg?url" alt="Placeholder" class="w-full h-60 object-cover rounded-lg mb-8" />
-
+      <!-- -mt-12 -->
       <div v-if="doc">
         <div>
           <div class="
@@ -50,13 +61,17 @@
               </div>
             </div>
           </div>
-          <p class="mt-3 text-sm leading-6 text-gray-600 dark:text-gray-100">
+          <p class="mt-3 text-sm leading-6 text-gray-600">
             {{ doc.description }}
           </p>
-          <div class="mt-6 flex border-t border-gray-900/5 pt-6" />
-          <div class="h-2px my-3 bg-warm-gray-100 dark:bg-dark-200 w-full"></div>
+          <div class="mt-6 flex border-t border-gray-900/5 dark:border-gray-100/5 pt-6" />
+          <!-- <div class="h-2px my-3 bg-gray-100 dark:bg-gray-100 w-full"></div> -->
 
-          <ContentRendererMarkdown :value="doc" class="prose" :components="components"/>
+          <!-- class="max-w-full overflow-x-auto text-gray-700 dark:text-gray-300" -->
+          <!-- <ContentSlot :use="$slots.default" unwrap="p" /> -->
+          <pre>
+            <ContentRendererMarkdown :value="doc" class="prose" :components="components" />
+          </pre>
         </div>
 
 
@@ -88,16 +103,16 @@
           <span class="font-mono">
             Updated at
             {{
-              new Date(doc.date).toLocaleString("en-us", {
-                weekday: "short",
-              })
+            new Date(doc.date).toLocaleString("en-us", {
+            weekday: "short",
+            })
             }},
             {{
-              new Date(doc.date).toLocaleString("en-us", {
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-              })
+            new Date(doc.date).toLocaleString("en-us", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+            })
             }}
           </span>
         </div>
@@ -107,21 +122,23 @@
 </template>
 
 <script setup>
-// import 'prismjs/themes/prism.css'; 
-// import Prism from 'prismjs';
-// import 'prismjs/components/prism-javascript';
 import { PostGithubRepo } from '#components';
 
 const { params } = useRoute();
 const { data: doc } = await useAsyncData('document', () => queryContent(`/post/${params.slug}`).findOne());
-// onMounted(() => {
-//   Prism.highlightAll(); // Highlights all code blocks on mount
-// });
 
 const components = {
-  'PostGithubRepo': PostGithubRepo
+  'post-github-repo': PostGithubRepo
 }
+
+onMounted(() => {
+  document.body.classList.add('dark');
+})
 </script>
 
+<style scoped>
+.backdrop-blur-esm {
+  backdrop-filter: blur(2px);
+}
 
-
+</style>
