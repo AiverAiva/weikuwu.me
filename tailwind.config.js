@@ -1,16 +1,16 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./components/**/*.{js,vue,ts}",
-    // "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    // "./plugins/**/*.js",
-    "./nuxt.config.js",
-    
-    "./error.vue",
+import colors from 'tailwindcss/colors'
+// import typography from '@tailwindcss/typography'
+
+export default {
+  darkMode: 'class',
+  plugins: [
+    // typography(),
   ],
   theme: {
-    extend: {},
-  },
-  plugins: [require('tailwindcss'), require('autoprefixer')],
+    extend: {
+      colors: {
+        primary: colors.emerald
+      }
+    }
+  }
 }
