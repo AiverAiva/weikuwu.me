@@ -10,18 +10,27 @@ author: ["AiverAiva"]
 SampleSample**Sample**__Sample__
 ## Sample
 
-aaa[aaa](www.google.com)
+aaa <u>bbb[aaa](https://www.google.com)</u> ccc
 
-```js [file.js]{4-6,7} meta-info=val
+
+```js [file.js]
 export default () => {
    console.log('Code block')
 }
 ```
 
-<PostGithubRepo user="AiverAiva" repo="weikuwu.me"/>
-<PostGithubRepo user="AiverAiva" repo="weikuwu.me"/>
+```ts [app.config.ts]
+export default defineAppConfig({
+  socials: {
+    twitter: 'Atinux',
+    github: 'Atinux/content-wind'
+    mastodon: '@atinux@webtoo.ls'
+  }
+})
+```
 
-<div>
-aaa
-</div>
+<div><post-github-repo user="AiverAiva" repo="weikuwu.me"/> </div>
+<div><post-github-repo user="AiverAiva" repo="weikuwu.meaaaaa"/> </div>
+
+### Sample
 bbb
