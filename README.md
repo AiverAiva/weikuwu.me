@@ -1,16 +1,15 @@
 # weikuwu.me
 
-## Project setup
+## TODO
+- actually add the README file
+
+## Build
 ```
-npm install
+yarn install
 ```
 
-## Dev env
+## Develop
 ```
-npm run dev
+yarn dev
 ```
 
-## Build project
-```
-npm run build
-```
