@@ -15,31 +15,28 @@ export default defineNuxtConfig({
       pathPrefix: true,
     },
   ],
-  // content: {
-  //   highlight: {
-  //       theme: {
-  //           default: "one-dark-pro",
-  //           dark: "github-dark",
-  //       },
-  //   },
-  // },
+  // https://content.nuxtjs.org
+  content: {
+    documentDriven: true,
+    highlight: {
+      // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
+      theme: {
+        dark: 'github-dark',
+        default: 'github-light'
+      }
+    },
+    markdown: {
+      // Allow custom Vue components
+      mdc: true,
+    },
+  },
   modules: [
     // 'vue-tippy/nuxt'
     '@nuxt/content',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/tailwindcss',
   ],
   plugins: [
     { src: "@/plugins/aos", ssr: false, mode: "client" }
   ],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-      // 'postcss-import': {},
-      'tailwindcss/nesting': 'postcss-nesting',
-      // 'postcss-preset-env': {
-      //   features: { 'nesting-rules': false },
-      // },
-    },
-  },
 })
