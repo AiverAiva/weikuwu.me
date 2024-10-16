@@ -3,6 +3,10 @@
 </template>
 
 <script setup>
+onMounted(() => {
+  document.body.classList.remove('dark');
+})
+
 useSeoMeta({
     url: 'https://weikuwu.me',
     title: 'AiverAiva',

@@ -6,8 +6,8 @@
         text-sm
         font-semibold
         bg-gray-100 bg-opacity-50
-        dark:bg-dark-700
-        dark:text-light-900
+        dark:bg-gray-700
+        dark:text-light-800
         rounded-md
         mr-2
       ">

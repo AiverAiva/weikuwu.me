@@ -1,14 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
-  /* font-family: "Inter Regular", sans-serif; */
-  color: #272829;
-}
+
 
 a {
   color: #ffb3c6;
@@ -18,6 +11,26 @@ a:hover {
   color: #d899a9;
 }
   
+span {
+  @apply dark:text-slate-400;
+}
+
+p {
+  @apply dark:text-slate-400;
+}
+
+.prose h1, h2, h3 {
+  @apply dark:text-white;
+}
+
+.prose h1 {
+  @apply text-3xl;
+}
+
+.prose h2 {
+  @apply text-2xl;
+}
+
 ::-webkit-scrollbar {
   /* display: flex; */
   width: 20px;
@@ -42,6 +55,30 @@ a:hover {
   border-radius: 10px;
 }
 /* add transition and scale bigger on hover */
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar {
+  width: 20px;
+  background: transparent;
+}
+
+.dark ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px 10px #495168; /* Dark background */
+  border: solid 5px transparent;
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 10px 10px #182335; /* Darker thumb */
+  border: solid 7px transparent;
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 0 0 10px 10px #353f56; /* Hover effect in dark mode */
+  border: solid 7px transparent;
+  border-radius: 10px;
+}
 
 /*--------------------------------------------------------------
 # Preloader
@@ -1231,33 +1268,3 @@ a:hover {
   border-radius: 0
 }
 
-/* themeswitcher*/
-
-.theme-switcher-button {
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.dark-mode-button {
-  background-color: #2d3748; 
-  color: #ffffff;
-}
-
-.dark-mode-button:hover {
-  background-color: #3B4556; 
-}
-
-.light-mode-button {
-  background-color: #ffffff; 
-  color: #2d3748; 
-}
-
-.light-mode-button:hover {
-  background-color: #f1f1f1; 
-}
