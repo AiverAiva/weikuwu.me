@@ -1,6 +1,6 @@
 <template>
     <div
-        class="flex items-center justify-between text-gray-800 dark:text-slate-200 border border-gray-400 bg-white dark:bg-slate-800 dark:border-gray-600 font-mono text-sm py-3 px-4 w-fit mb-2 rounded-md">
+        class="flex items-center justify-between text-gray-800 duration-150 dark:text-slate-200 border border-gray-400 bg-white dark:bg-slate-800 dark:border-gray-600 font-mono text-sm py-3 px-4 w-fit mb-2 rounded-md">
         <i class='bx bxl-github text-2xl' />
         <div class="flex gap-1 mx-2">
             <span class="text-left">{{ user }}/{{ repo }}</span>
