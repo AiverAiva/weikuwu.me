@@ -69,13 +69,13 @@ p {
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 10px 10px #182335; /* Darker thumb */
+  box-shadow: inset 0 0 10px 10px #7e8aa8; /* Darker thumb */
   border: solid 7px transparent;
   border-radius: 10px;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  box-shadow: inset 0 0 10px 10px #353f56; /* Hover effect in dark mode */
+  box-shadow: inset 0 0 10px 10px #b4c2da; /* Hover effect in dark mode */
   border: solid 7px transparent;
   border-radius: 10px;
 }
