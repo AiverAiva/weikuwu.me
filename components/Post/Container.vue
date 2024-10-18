@@ -1,38 +1,23 @@
 <template>
-    <div class="block p-6 rounded-lg shadow-md bg-white bg-opacity-30 transition duration-300 backdrop-filter backdrop-blur-sm hover:bg-opacity-10 hover:shadow-lg">
+    <div
+        class="block p-6 rounded-lg shadow-md bg-white dark:bg-gray-900 dark:bg-opacity-100 bg-opacity-30 transition duration-300 backdrop-filter backdrop-blur-sm hover:bg-opacity-10 hover:shadow-lg">
         <nuxt-link :to="`/post/${slug}`" class="flex gap-4 items-start">
             <div class="w-1/3">
-                <img 
-                    v-if="post.thumbnail" 
-                    :src="post.thumbnail" 
-                    alt="Thumbnail" 
-                    class="w-full h-40 object-cover rounded-lg image-smooth hover:scale-105"
-                />
-                <img 
-                    v-else 
-                    src="/img/placeholder.jpg?url" 
-                    alt="Placeholder" 
-                    class="w-full h-40 object-cover rounded-lg image-smooth hover:scale-105"     
-                />
+                <img v-if="post.thumbnail" :src="post.thumbnail" alt="Thumbnail"
+                    class="w-full h-40 object-cover rounded-lg image-smooth hover:scale-105" />
+                <img v-else src="/img/placeholder.jpg?url" alt="Placeholder"
+                    class="w-full h-40 object-cover rounded-lg image-smooth hover:scale-105" />
             </div>
             <div class="flex-grow">
-                <div 
-                    v-if="post.date" 
-                    class="font-sans font-thin text-sm text-gray-500 relative h-5"
-                    @mouseover="hover = true" 
-                    @mouseleave="hover = false"
-                >
-                    <span
-                        class="absolute inset-0 transition-opacity duration-300"
-                        :class="{ 'opacity-0': hover, 'opacity-100': !hover }"
-                    >
+                <div v-if="post.date" class="font-sans font-thin text-sm text-gray-500 relative h-5"
+                    @mouseover="hover = true" @mouseleave="hover = false">
+                    <span class="absolute inset-0 transition-opacity duration-300"
+                        :class="{ 'opacity-0': hover, 'opacity-100': !hover }">
                         {{ formattedDate }}
                     </span>
 
-                    <span
-                        class="absolute inset-0 transition-opacity duration-300"
-                        :class="{ 'opacity-100': hover, 'opacity-0': !hover }"
-                    >
+                    <span class="absolute inset-0 transition-opacity duration-300"
+                        :class="{ 'opacity-100': hover, 'opacity-0': !hover }">
                         {{ daysAgo + ' days ago' }}
                     </span>
                 </div>
