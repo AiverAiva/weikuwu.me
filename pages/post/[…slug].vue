@@ -14,13 +14,12 @@
         items-center
         duration-150
       ">
-    <!-- @click.self="$router.back()" -->
-    <!-- backdrop-filter backdrop-blur-sm -->
     <ThemeSwitcher />
     <div class="
           w-full
           max-w-screen-lg
           overflow-y-auto
+          overflow-x-hidden
           bg-white
           dark:bg-slate-800
           p-6
@@ -28,13 +27,14 @@
           rounded-xl
           shadow-lg
           duration-150
-        " style="max-height: calc(100vh - 210px)">
+        " style="max-height: calc(100vh - 210px);">
+      <!-- word-wrap: break-word; -->
       <div
         class="block z-50 duration-150 backdrop-blur-esm rounded-lg hover:drop-shadow-md sticky-section-header top-0 section-colors"
         style="position: sticky;">
         <div
           class="sm:inline-block duration-150 opacity-50 hover:opacity-100 cursor-pointer w-full rounded-lg stuck bg-white dark:bg-slate-800 bg-opacity-75 dark:bg-opacity-75">
-          <ButtonBack />
+          <ButtonBack href="/post" />
         </div>
       </div>
 
@@ -63,14 +63,12 @@
           </div>
           <p class="mt-3 text-sm leading-6 text-gray-600">
             {{ doc.description }}
-          </p>
-          <div class="mt-6 flex border-t border-gray-900/5 dark:border-gray-100/5 pt-6" />
-          <!-- <div class="h-2px my-3 bg-gray-100 dark:bg-gray-100 w-full"></div> -->
 
-          <!-- class="max-w-full overflow-x-auto text-gray-700 dark:text-gray-300" -->
-          <!-- <ContentSlot :use="$slots.default" unwrap="p" /> -->
+          </p>
+          <div class="mt-6 flex border-t border-gray-900/5 dark:border-gray-100/5 pt-6"></div>
+
           <pre>
-            <ContentRendererMarkdown :value="doc" class="prose" :components="components" />
+            <ContentRendererMarkdown :value="doc" class="prose text-wrap" :components="components" />
           </pre>
         </div>
 
@@ -140,5 +138,4 @@ onMounted(() => {
 .backdrop-blur-esm {
   backdrop-filter: blur(2px);
 }
-
 </style>
