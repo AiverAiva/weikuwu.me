@@ -2,6 +2,7 @@
 
 ## TODO
 - actually add the README file
+- fix code blocks in content file
 
 ## Build
 ```
