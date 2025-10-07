@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+  compatibilityDate: '2025-10-05',
   css: ['~/assets/css/main.css', 'boxicons/css/boxicons.min.css'],
   app: {
     head: {

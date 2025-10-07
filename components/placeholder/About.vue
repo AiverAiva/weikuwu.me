@@ -1,66 +1,68 @@
 <template>
-  <div id="about" class="flex flex-col flex-grow pt-16 pb-20 justify-center">
-    <!-- <div class="flex items-center"> -->
-    <div class="container mx-auto px-10 md:px-20">
-      <!-- start from here -->
-      <div class="flex flex-col md:flex-row gap-5 mb-4 md:gap-10">
-        <div>
-          <h1 class="text-4xl font-bold text-center">About Me</h1>
+  <ScrollReveal>
+
+    <div id="about" class="flex flex-col flex-grow pt-16 pb-20 justify-center">
+      <!-- <div class="flex items-center"> -->
+      <div class="container mx-auto px-10 md:px-20">
+        <!-- start from here -->
+        <div class="flex flex-col md:flex-row gap-5 mb-4 md:gap-10">
+          <div>
+            <h1 class="text-4xl font-bold text-center">About Me</h1>
+          </div>
         </div>
-      </div>
-      <!-- md:gap-5 -->
-      <div class="flex flex-col md:flex-row gap-5 ">
-        <div class="w-full md:w-1/2">
-          <Card title="Me">I am in touch with programming since I was 11 and have self-taught a
-            multitude of languages and frameworks since then.</Card>
+        <!-- md:gap-5 -->
+        <div class="flex flex-col md:flex-row gap-5 ">
+          <div class="w-full md:w-1/2">
+            <Card title="Me">I am in touch with programming since I was 11 and have self-taught a
+              multitude of languages and frameworks since then.</Card>
+          </div>
+
+          <Card title="Tech Stack">
+            <div class="flex flex-col md:flex-row gap-5 mt-4">
+              <div class="bg-red-100 rounded-xl text-center p-1 w-32">Backend</div>
+              <div class="text-center p-1">Express, Flask, Django</div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5 mt-2">
+              <div class="bg-red-100 rounded-xl text-center p-1 w-32">Frontend</div>
+              <div class="text-center p-1">Vue, React</div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5 mt-2">
+              <div class="bg-red-100 rounded-xl text-center p-1 w-32">Database</div>
+              <div class="text-center p-1">MongoDB, PostgreSQL</div>
+            </div>
+          </Card>
         </div>
 
-        <Card title="Tech Stack">
-          <div class="flex flex-col md:flex-row gap-5 mt-4">
-            <div class="bg-red-100 rounded-xl text-center p-1 w-32">Backend</div>
-            <div class="text-center p-1">Express, Flask, Django</div>
-          </div>
-          <div class="flex flex-col md:flex-row gap-5 mt-2">
-            <div class="bg-red-100 rounded-xl text-center p-1 w-32">Frontend</div>
-            <div class="text-center p-1">Vue, React</div>
-          </div>
-          <div class="flex flex-col md:flex-row gap-5 mt-2">
-            <div class="bg-red-100 rounded-xl text-center p-1 w-32">Database</div>
-            <div class="text-center p-1">MongoDB, PostgreSQL</div>
-          </div>
-        </Card>
+        <!-- <div class="flex flex-col md:flex-row gap-5 md:gap-y-10">
+            <Card class="p-4">
+              <ClientImage
+              :src="'https://github-readme-stats.vercel.app/api?username=AiverAiva&show_icons=true&theme=dracula&border_radius=8&icon_color=df648c&text_color=718096&hide_title=true&hide_border=true&bg_color=none'"
+              class="rounded-xl" />
+            </Card>
+            <Card class="p-4">
+              <div class="flex items-center h-full">
+                <ClientImage
+                :src="'https://github-readme-stats-jrzz.vercel.app/api/top-langs?username=AiverAiva&layout=compact'"
+                class="rounded-xl w-full" />
+              </div>
+            </Card>
+          </div> -->
+
+        <!-- <div class="flex flex-col md:flex-row gap-5 md:gap-10"> -->
+
+
+
+        <!-- </div> -->
+        <!-- </div> -->
       </div>
-
-      <!-- <div class="flex flex-col md:flex-row gap-5 md:gap-y-10">
-        <Card class="p-4">
-          <ClientImage
-            :src="'https://github-readme-stats.vercel.app/api?username=AiverAiva&show_icons=true&theme=dracula&border_radius=8&icon_color=df648c&text_color=718096&hide_title=true&hide_border=true&bg_color=none'"
-            class="rounded-xl" />
-        </Card>
-        <Card class="p-4">
-          <div class="flex items-center h-full">
-            <ClientImage
-              :src="'https://github-readme-stats-jrzz.vercel.app/api/top-langs?username=AiverAiva&layout=compact'"
-              class="rounded-xl w-full" />
-          </div>
-        </Card>
-      </div> -->
-
-      <!-- <div class="flex flex-col md:flex-row gap-5 md:gap-10"> -->
-
-
-
-      <!-- </div> -->
-      <!-- </div> -->
     </div>
-  </div>
+  </ScrollReveal>
 </template>
-  
+
 <script>
 // import { Chart, RadarController, PointElement, LineElement, Tooltip, Legend, RadialLinearScale } from 'chart.js/auto';
 import Card from '~/components/Card.vue'
-import ClientImage from '~/components/ClientImage.vue'
-import StackedCard from '~/components/StackedCard.vue'
+import ScrollReveal from '../ScrollReveal.vue'
 
 // Chart.register(RadarController, PointElement, LineElement, Tooltip, Legend, RadialLinearScale);
 
@@ -157,7 +159,7 @@ export default {
   },
 };
 </script>
-  
+
 <style>
 /* canvas {
   max-width: 100%;

@@ -10,7 +10,7 @@ a {
 a:hover {
   color: #d899a9;
 }
-  
+
 span {
   @apply dark:text-slate-400;
 }
@@ -19,7 +19,9 @@ p {
   @apply dark:text-slate-400;
 }
 
-.prose h1, h2, h3 {
+.prose h1,
+h2,
+h3 {
   @apply dark:text-white;
 }
 
@@ -49,11 +51,12 @@ p {
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover { 
+::-webkit-scrollbar-thumb:hover {
   box-shadow: inset 0 0 10px 10px #555;
   border: solid 7px transparent;
   border-radius: 10px;
 }
+
 /* add transition and scale bigger on hover */
 
 /* Dark mode scrollbar */
@@ -63,19 +66,22 @@ p {
 }
 
 .dark ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 10px 10px #495168; /* Dark background */
+  box-shadow: inset 0 0 10px 10px #495168;
+  /* Dark background */
   border: solid 5px transparent;
   border-radius: 10px;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 10px 10px #7e8aa8; /* Darker thumb */
+  box-shadow: inset 0 0 10px 10px #7e8aa8;
+  /* Darker thumb */
   border: solid 7px transparent;
   border-radius: 10px;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  box-shadow: inset 0 0 10px 10px #b4c2da; /* Hover effect in dark mode */
+  box-shadow: inset 0 0 10px 10px #b4c2da;
+  /* Hover effect in dark mode */
   border: solid 7px transparent;
   border-radius: 10px;
 }
@@ -113,6 +119,7 @@ p {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -122,6 +129,7 @@ p {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -182,12 +190,13 @@ p {
   list-style: none;
 }
 
-.nav-menu > ul > li {
+.nav-menu>ul>li {
   position: relative;
   white-space: nowrap;
 }
 
-.nav-menu a, .nav-menu a:focus {
+.nav-menu a,
+.nav-menu a:focus {
   display: flex;
   align-items: center;
   color: #45505b;
@@ -202,42 +211,56 @@ p {
   overflow: hidden;
 }
 
-.nav-menu a i, .nav-menu a:focus i {
+.nav-menu a i,
+.nav-menu a:focus i {
   font-size: 20px;
 }
 
-.nav-menu a span, .nav-menu a:focus span {
+.nav-menu a span,
+.nav-menu a:focus span {
   padding: 0 5px 0 7px;
   color: #45505b;
 }
 
 @media (min-width: 992px) {
-  .nav-menu a, .nav-menu a:focus {
+
+  .nav-menu a,
+  .nav-menu a:focus {
     width: 56px;
   }
-  .nav-menu a span, .nav-menu a:focus span {
+
+  .nav-menu a span,
+  .nav-menu a:focus span {
     display: none;
     color: #fff;
   }
 }
-  
-.nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
   color: #fff;
   background: #ffb3c6;
 }
 
-.nav-menu a:hover span, .nav-menu .active span, .nav-menu .active:focus span, .nav-menu li:hover > a span {
+.nav-menu a:hover span,
+.nav-menu .active span,
+.nav-menu .active:focus span,
+.nav-menu li:hover>a span {
   color: #fff;
   /* opacity: 0;
   transition: opacity 0.2s ease-out; */
 }
 
-.nav-menu a:hover, .nav-menu li:hover > a {
+.nav-menu a:hover,
+.nav-menu li:hover>a {
   width: 100%;
-  color: #fff;  
+  color: #fff;
 }
 
-.nav-menu a:hover span, .nav-menu li:hover > a span {
+.nav-menu a:hover span,
+.nav-menu li:hover>a span {
   display: block;
   /* opacity: 1;
   transition: opacity 0.2s ease-out; */
@@ -290,27 +313,38 @@ p {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
+  position: relative;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: url("/img/home-banner-light.png") top right no-repeat;
   background-size: cover;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  #hero::before {
+    opacity: 0.3;
+  }
+}
+
+#hero > * {
   position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
   }
-}
-
-#hero:before {
-  content: "";
-  background: rgba(255, 255, 255, 0);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 #hero h1 {
@@ -360,10 +394,12 @@ p {
   #hero {
     text-align: center;
   }
+
   #hero h1 {
     font-size: 32px;
     line-height: 36px;
   }
+
   #hero p {
     margin-top: 10px;
     font-size: 20px;
@@ -624,7 +660,8 @@ p {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
   color: #ffb3c6;
 }
 
@@ -797,7 +834,7 @@ p {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
@@ -979,7 +1016,8 @@ p {
   margin: 0 0 15px 0;
 }
 
-.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
   color: #90c8fc;
   font-size: 26px;
 }
@@ -1062,11 +1100,14 @@ p {
   color: #728394;
 }
 
-.contact .info .email, .contact .info .phone {
+.contact .info .email,
+.contact .info .phone {
   margin-top: 40px;
 }
 
-.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
   background: #ffb3c6;
   color: #fff;
 }
@@ -1089,7 +1130,7 @@ p {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
@@ -1122,7 +1163,8 @@ p {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .php-email-form input,
+.contact .php-email-form textarea {
   border-radius: 4px;
   box-shadow: none;
   font-size: 14px;
@@ -1153,6 +1195,7 @@ p {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -1162,6 +1205,7 @@ p {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -1234,10 +1278,12 @@ p {
 }
 
 @keyframes blink {
+
   from,
   to {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
@@ -1252,7 +1298,7 @@ p {
   background: none;
   /* -webkit-appearance: none;
   -moz-appearance: none; */
-  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
   border-radius: 4px;
   width: 70px;
   height: 70px;
@@ -1267,4 +1313,3 @@ p {
 .avatar--full {
   border-radius: 0
 }
-
