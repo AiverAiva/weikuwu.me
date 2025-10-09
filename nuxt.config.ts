@@ -2,7 +2,11 @@
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-10-05',
-  css: ['~/assets/css/main.css', 'boxicons/css/boxicons.min.css'],
+  css: [
+    '~/assets/css/main.css', 
+    'boxicons/css/boxicons.min.css',
+    '@fontsource/inter/index.css'
+  ],
   app: {
     head: {
       link: [
