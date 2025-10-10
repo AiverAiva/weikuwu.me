@@ -1,9 +1,8 @@
 <template>
     <ScrollReveal>
-
         <div id="hero" class="flex flex-col justify-center items-center">
-            <div class="container" data-aos="zoom-in" data-aos-delay="100">
-                <h1 class="font-sans">AiverAiva</h1>
+            <div class="container" data-aos="fade-up" data-aos-duration="300">
+                <h1 class="font-bold text-7xl/8 text-[#45505b]">AiverAiva</h1>
                 <p class="font-mono">i
                     <TypedText :content="strings" />
                 </p>
@@ -23,6 +22,7 @@
                 </div>
             </div>
         </div>
+        <ScrollDownButton />
     </ScrollReveal>
 </template>
 

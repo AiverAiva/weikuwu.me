@@ -1,11 +1,12 @@
 <template>
-  <NavigationBar />
+  <!-- <NavigationBar /> -->
   <PlaceholderHero />
-  <div class="custom-bg loading-blur">
-    <PlaceholderAbout />
-    <PlaceholderGame />
-    <PlaceholderPosts />
-  </div>
+  <!-- <div class="custom-bg loading-blur"> -->
+    <!-- <PlaceholderAbout /> -->
+    <!-- <PlaceholderProject /> -->
+    <!-- <PlaceholderGame /> -->
+    <!-- <PlaceholderPosts /> -->
+  <!-- </div> -->
 
   <!-- <Experience /> -->
 </template>
