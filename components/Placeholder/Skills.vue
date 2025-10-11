@@ -1,11 +1,13 @@
 <template>
-    <section id="my-stack" ref="containerRef" class="p-6 flex flex-col justify-center">
+    <section id="my-stack" ref="containerRef" class="p-6 pt-12 flex flex-col justify-center">
         <div class="container mx-auto px-10 md:px-20 pb-6">
-            <div class="flex flex-col md:flex-row gap-5 md:gap-10">
-                <div>
-                    <h1 class="text-4xl font-light mb-4">Tech Stacks</h1>
+            <ScrollReveal>
+                <div class="flex flex-col md:flex-row gap-5 md:gap-10">
+                    <div>
+                        <h1 class="text-4xl font-light mb-4">Tech Stacks</h1>
+                    </div>
                 </div>
-            </div>
+            </ScrollReveal>
             <div class="space-y-20">
                 <div v-for="(value, key) in MY_STACK" :key="key">
                     <ScrollReveal>
@@ -48,7 +50,7 @@ function getIconUrl(name: string, icon: string) {
         'Nuxt.js': 'https://raw.githubusercontent.com/nuxt/modules/main/icons/nuxt.svg',
         'CSS3': 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/css-icon.png',
         'Java': 'https://cdn-icons-png.flaticon.com/512/226/226777.png',
-        'AWS': 'https://tse1.mm.bing.net/th/id/OIP.WDyN4Z240h5yY-DRl4y8hAHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3',
+        'AWS': 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/aws-icon.png',
     }
 
     if (customIcons[name]) {
@@ -70,7 +72,7 @@ onMounted(() => {
         scrollTrigger: {
             trigger: el,
             start: 'top 80%',
-            end: 'bottom 80%',
+            end: 'bottom 60%',
             scrub: 0.5,
         },
     }).from(slideUpEls, {
@@ -95,5 +97,4 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
