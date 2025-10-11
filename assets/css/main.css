@@ -409,7 +409,7 @@ h3 {
   overflow: hidden;
 }
 
-#hero::before {
+#herobg::before {
   content: "";
   position: absolute;
   inset: 0;
