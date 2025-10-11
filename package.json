@@ -6,10 +6,12 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "nuxt start"
   },
   "devDependencies": {
     "@nuxt/image": "^1.7.0",
+    "@types/node": "^24.7.2",
     "nuxt": "^3.2.3"
   },
   "dependencies": {

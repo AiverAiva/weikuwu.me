@@ -7,20 +7,12 @@
     <!-- <PlaceholderGame /> -->
      <PlaceholderSkills />
     <!-- <PlaceholderPosts /> -->
-    <!-- <Transition name="fade">
-      <NuxtPage v-if="showModal" />
-    </Transition> -->
   </div>
 
   <!-- <Experience /> -->
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
-const showModal = computed(() => route.path.startsWith('/project/'))
-
 definePageMeta({
   layout: 'home'
 })

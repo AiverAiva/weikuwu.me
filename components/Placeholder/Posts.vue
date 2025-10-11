@@ -1,5 +1,5 @@
 <template>
-    <ScrollReveal>
+    <!-- <ScrollReveal>
         <div id="posts">
             <div class="container mx-auto px-10 md:px-20 pb-6">
                 <div class="flex flex-col md:flex-row gap-5 md:gap-10">
@@ -17,12 +17,12 @@
                 </div>
             </div>
         </div>
-    </ScrollReveal>
+    </ScrollReveal> -->
 </template>
 
 <script setup>
-import ScrollReveal from '../ScrollReveal.vue'
+// import ScrollReveal from '../ScrollReveal.vue'
 
-const { data: posts } = await useAsyncData('post', () => queryContent('/post').find());
-const latestPosts = posts.value.slice(0, 3);
+// const { data: posts } = await useAsyncData('post', () => queryContent('/post').find());
+// const latestPosts = posts.value.slice(0, 3);
 </script>

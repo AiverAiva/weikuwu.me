@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+  build: {
+    transpile: ['gsap'],  // Ensure gsap is transpiled if needed
+  },
   compatibilityDate: '2025-10-05',
   css: [
     '~/assets/css/main.css',

@@ -39,6 +39,7 @@
 import { onMounted, ref } from 'vue'
 import { MY_STACK } from '@/lib/data'
 import gsap from 'gsap'
+
 import { ScrollTrigger } from 'gsap/all'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -47,10 +48,10 @@ const containerRef = ref<HTMLElement | null>(null)
 
 function getIconUrl(name: string, icon: string) {
     const customIcons: Record<string, string> = {
-        'Nuxt.js': 'https://raw.githubusercontent.com/nuxt/modules/main/icons/nuxt.svg',
-        'CSS3': 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/css-icon.png',
-        'Java': 'https://cdn-icons-png.flaticon.com/512/226/226777.png',
-        'AWS': 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/aws-icon.png',
+        'Nuxt.js': '/logo/nuxt.svg',
+        'CSS3': '/logo/css.webp',
+        'Java': '/logo/java.png',
+        'AWS': '/logo/aws.webp',
     }
 
     if (customIcons[name]) {
