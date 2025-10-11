@@ -511,7 +511,7 @@ h3 {
 
 .section-title h2 {
   font-size: 32px;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -549,7 +549,7 @@ h3 {
 # About
 --------------------------------------------------------------*/
 .about .content h3 {
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 26px;
   color: #728394;
 }
@@ -611,7 +611,7 @@ h3 {
 .facts .count-box span {
   font-size: 36px;
   display: block;
-  font-weight: 600;
+  /* font-weight: 600; */
   color: #011426;
 }
 
@@ -637,7 +637,7 @@ h3 {
   margin: 0;
   text-transform: uppercase;
   display: block;
-  font-weight: 600;
+  /* font-weight: 600; */
   /* font-family: "Poppins", sans-serif; */
   color: #45505b;
 }
@@ -663,7 +663,7 @@ h3 {
 --------------------------------------------------------------*/
 .resume .resume-title {
   font-size: 26px;
-  font-weight: 700;
+  /* font-weight: 700; */
   margin-top: 20px;
   margin-bottom: 20px;
   color: #45505b;
@@ -679,7 +679,8 @@ h3 {
 .resume .resume-item h4 {
   line-height: 18px;
   font-size: 18px;
-  font-weight: 600;
+  /* font-weight: 600; */
+  
   text-transform: uppercase;
   /* font-family: "Poppins", sans-serif; */
   color: #ffb3c6;
@@ -691,7 +692,7 @@ h3 {
   background: #f7f8f9;
   padding: 5px 15px;
   display: inline-block;
-  font-weight: 600;
+  /* font-weight: 600; */
   margin-bottom: 10px;
 }
 
@@ -737,11 +738,12 @@ h3 {
 }
 
 .portfolio #portfolio-flters li {
+
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px;
   font-size: 14px;
-  font-weight: 600;
+  /* font-weight: 600; */
   line-height: 1;
   text-transform: uppercase;
   color: #272829;
@@ -826,7 +828,7 @@ h3 {
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
   color: #45505b;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
@@ -911,7 +913,7 @@ h3 {
 
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
-  font-weight: 700;
+  /* font-weight: 700; */
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
@@ -933,7 +935,7 @@ h3 {
 
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;
-  font-weight: 700;
+  /* font-weight: 700; */
   margin-bottom: 20px;
 }
 
@@ -981,7 +983,7 @@ h3 {
 }
 
 .services .icon-box h4 {
-  font-weight: 600;
+  /* font-weight: 600; */
   margin: 10px 0 15px 0;
   font-size: 22px;
 }
@@ -1094,7 +1096,7 @@ h3 {
 
 .testimonials .testimonial-item h3 {
   font-size: 20px;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin: 10px 0 5px 0;
   color: #111;
 }
@@ -1177,7 +1179,7 @@ h3 {
 .contact .info h4 {
   padding: 0 0 0 60px;
   font-size: 22px;
-  font-weight: 600;
+  /* font-weight: 600; */
   margin-bottom: 5px;
   color: #45505b;
 }
@@ -1216,7 +1218,7 @@ h3 {
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .contact .php-email-form .error-message br+br {
@@ -1229,7 +1231,7 @@ h3 {
   background: #18d26e;
   text-align: center;
   padding: 15px;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .contact .php-email-form .loading {
@@ -1313,7 +1315,7 @@ h3 {
 
 #footer h3 {
   font-size: 36px;
-  font-weight: 700;
+  /* font-weight: 700; */
   position: relative;
   /* font-family: "Poppins", sans-serif; */
   padding: 0;
