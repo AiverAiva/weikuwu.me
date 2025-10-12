@@ -1,6 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+  nitro: {
+    prerender: {
+      routes: [
+        '/', // homepage
+        // ...require('./lib/data').PROJECTS.map(p => `/projects/${p.slug}`)
+      ]
+    }
+  },
   build: {
     transpile: ['gsap'],  // Ensure gsap is transpiled if needed
   },
@@ -33,23 +41,23 @@ export default defineNuxtConfig({
     },
   ],
   // https://content.nuxtjs.org
-  content: {
-    documentDriven: true,
-    highlight: {
-      // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
-      theme: {
-        dark: 'github-dark',
-        default: 'github-light'
-      }
-    },
-    markdown: {
-      // Allow custom Vue components
-      mdc: true,
-    },
-  },
+  // content: {
+  //   documentDriven: true,
+  //   highlight: {
+  //     // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
+  //     theme: {
+  //       dark: 'github-dark',
+  //       default: 'github-light'
+  //     }
+  //   },
+  //   markdown: {
+  //     // Allow custom Vue components
+  //     mdc: true,
+  //   },
+  // },
   modules: [
     // 'vue-tippy/nuxt'
-    '@nuxt/content',
+    // '@nuxt/content',
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
   ],

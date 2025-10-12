@@ -1,5 +1,5 @@
 <template>
-  <div class="
+  <!-- <div class="
         w-screen
         h-screen
         fixed
@@ -28,7 +28,6 @@
           shadow-lg
           duration-150
         " style="max-height: calc(100vh - 210px);">
-      <!-- word-wrap: break-word; -->
       <div
         class="block z-50 duration-150 backdrop-blur-esm rounded-lg hover:drop-shadow-md sticky-section-header top-0 section-colors"
         style="position: sticky;">
@@ -40,7 +39,6 @@
 
       <img v-if="doc.thumbnail" :src="doc.thumbnail" alt="Thumbnail" class="w-full h-40 object-cover rounded-lg mb-8" />
       <img v-else src="/img/placeholder.jpg?url" alt="Placeholder" class="w-full h-60 object-cover rounded-lg mb-8" />
-      <!-- -mt-12 -->
       <div v-if="doc">
         <div>
           <div class="
@@ -80,7 +78,6 @@
           <ul class="text-xs text-warm-gray-400">
             <li v-for="link in doc.reference" :key="link">
               <a :href="link" rel="noreferrer" target="_blank" class="inline-flex items-center">
-                <!-- <IconLink class="mr-1"></IconLink> -->
                 {{ link }}
               </a>
             </li>
@@ -95,43 +92,41 @@
             ">
           <a :href="`https://github.com/AiverAiva/problem-solutions/edit/main/content/problems/${$route.params.slug}.md`"
             rel="noreferrer" target="_blank" class="inline-flex items-center text-warm-gray-400">
-            <!-- <IconEdit class="mr-2"></IconEdit>
-              <span class=""> Edit this script </span> -->
           </a>
           <span class="font-mono">
             Updated at
             {{
-            new Date(doc.date).toLocaleString("en-us", {
-            weekday: "short",
-            })
+              new Date(doc.date).toLocaleString("en-us", {
+                weekday: "short",
+              })
             }},
             {{
-            new Date(doc.date).toLocaleString("en-us", {
-            day: "numeric",
-            month: "short",
-            year: "numeric",
-            })
+              new Date(doc.date).toLocaleString("en-us", {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+              })
             }}
           </span>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script setup>
-import { PostGithubRepo } from '#components';
+// import { PostGithubRepo } from '#components';
 
-const { params } = useRoute();
-const { data: doc } = await useAsyncData('document', () => queryContent(`/post/${params.slug}`).findOne());
+// const { params } = useRoute();
+// const { data: doc } = await useAsyncData('document', () => queryContent(`/post/${params.slug}`).findOne());
 
-const components = {
-  'post-github-repo': PostGithubRepo
-}
+// const components = {
+//   'post-github-repo': PostGithubRepo
+// }
 
-onMounted(() => {
-  document.body.classList.add('dark');
-})
+// onMounted(() => {
+//   document.body.classList.add('dark');
+// })
 </script>
 
 <style scoped>

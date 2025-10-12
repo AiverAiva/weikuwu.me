@@ -1,5 +1,5 @@
 <template>
-    <div class="
+    <!-- <div class="
         w-screen
         h-screen
         fixed
@@ -30,15 +30,15 @@
         " style="max-height: calc(80vh)">
             <PostContainer v-for="p in posts" v-bind:key="p.slug" :post="p" :slug="p._path.split('/').pop()" />
         </div>
-    </div>
+    </div> -->
 </template>
  
 <script setup>
-const { data: posts } = await useAsyncData('post', () => queryContent('/post').find());
+// const { data: posts } = await useAsyncData('post', () => queryContent('/post').find());
 
-onMounted(() => {
-    document.body.classList.add('dark');
-})
+// onMounted(() => {
+//     document.body.classList.add('dark');
+// })
 </script>
 
 <style scoped>
