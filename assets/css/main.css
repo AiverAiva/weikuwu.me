@@ -7,7 +7,7 @@
 
   /* Light mode color palette */
   --brand-primary: #FCF9EA;
-  --brand-secondary: #BADFDB;
+  --brand-secondary: #333333;
   --brand-tertiary: #FFA4A4;
   --brand-accent: #FFBDBD;
 
@@ -17,7 +17,7 @@
   --card-foreground: #2c2c2c;
   --popover: #ffffff;
   --popover-foreground: #2c2c2c;
-  --primary: #BADFDB;
+  --primary: #333333;
   --primary-foreground: #2c2c2c;
   --secondary: #FFBDBD;
   --secondary-foreground: #2c2c2c;
@@ -499,7 +499,7 @@ h3 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-.section {
+/* .section {
   padding: 60px 0;
   overflow: hidden;
 }
@@ -511,7 +511,6 @@ h3 {
 
 .section-title h2 {
   font-size: 32px;
-  /* font-weight: bold; */
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -543,7 +542,7 @@ h3 {
 
 .section-title p {
   margin-bottom: 0;
-}
+} */
 
 /*--------------------------------------------------------------
 # About
@@ -1157,7 +1156,7 @@ h3 {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .info {
+/* .contact .info {
   width: 100%;
   background: #fff;
 }
@@ -1179,7 +1178,6 @@ h3 {
 .contact .info h4 {
   padding: 0 0 0 60px;
   font-size: 22px;
-  /* font-weight: 600; */
   margin-bottom: 5px;
   color: #45505b;
 }
@@ -1201,7 +1199,7 @@ h3 {
 .contact .info .phone:hover i {
   background: #ffb3c6;
   color: #fff;
-}
+} */
 
 .contact .php-email-form {
   width: 100%;
