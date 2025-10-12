@@ -1,16 +1,40 @@
-<template>
-    <NuxtPage/>
-    <!-- <div
-        class="max-w-2xl px-4 py-10 m-auto bg-white sm:px-8 sm:shadow dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700 sm:rounded-lg">
-        <main
-            class="max-w-none prose dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 hover:prose-a:text-primary-400 prose-a:font-normal prose-a:no-underline prose-a:border-dashed prose-a:border-b hover:prose-a:border-solid hover:prose-a:border-primary-400">
-        </main>
-    </div> -->
-    
-</template>
+<script setup lang="ts">
+import { ref, onMounted, watch, nextTick } from 'vue'
+import { useRouter } from 'vue-router'
+import gsap from 'gsap'
 
-<script setup>
+const transitionRef = ref<HTMLElement | null>(null)
+const innerRef = ref<HTMLElement | null>(null)
+const router = useRouter()
+
+async function playTransition() {
+    await nextTick()
+    if (!transitionRef.value || !innerRef.value) return
+
+    const tl = gsap.timeline()
+    gsap.set(transitionRef.value, { yPercent: 0 })
+    gsap.set(innerRef.value, { yPercent: 100 })
+
+    tl.to(innerRef.value, { yPercent: 0, duration: 0.2 })
+        .to(innerRef.value, { yPercent: -100, duration: 0.2 })
+        .to(transitionRef.value, { yPercent: -100 })
+}
+
+onMounted(() => {
+    playTransition()
+    watch(() => router.currentRoute.value.fullPath, playTransition)
+})
 </script>
 
-<style scoped>
-</style>
+<template>
+    <div class="antialiased">
+        <div ref="transitionRef"
+            class="page-transition w-screen h-screen fixed top-0 left-0 bg-background-light z-[999]">
+            <div ref="innerRef"
+                class="page-transition--inner w-screen h-screen fixed top-0 left-0 bg-primary z-[1000] translate-y-full">
+            </div>
+        </div>
+
+        <slot />
+    </div>
+</template>

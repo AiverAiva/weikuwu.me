@@ -1,11 +1,11 @@
 <template>
   <!-- <NavigationBar /> -->
   <PlaceholderHero />
-  <div class="custom-bg loading-blur">
+  <div class="custom-bg custom-bgdark pt-24 pb-64 space-y-12 loading-blur">
     <!-- <PlaceholderAbout /> -->
-    <!-- <PlaceholderProject /> -->
     <!-- <PlaceholderGame /> -->
-     <PlaceholderSkills />
+    <PlaceholderSkills />
+    <PlaceholderProjects />
     <!-- <PlaceholderPosts /> -->
   </div>
 
@@ -26,6 +26,7 @@ definePageMeta({
   background-repeat: repeat;
   background-size: auto;
   background-blend-mode: color-burn;
+
 }
 
 .fade-enter-active,

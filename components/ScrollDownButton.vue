@@ -1,6 +1,6 @@
 <template>
     <div ref="scrollButton"
-        class="absolute left-0 right-0 bottom-0 mx-auto mb-4 h-8 w-5 cursor-pointer rounded-full border-2 border-gray-300 text-center dark:border-gray-700 transition-opacity duration-500 ease-out"
+        class="absolute left-0 right-0 bottom-10 mx-auto mb-4 h-8 w-5 cursor-pointer rounded-full border-2 border-gray-300 text-center dark:border-gray-700 transition-opacity duration-500 ease-out"
         :style="{ opacity }" tabindex="0" @click="scrollToNextSection">
         <div
             class="absolute left-0 right-0 mx-auto w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 animate-bounce-dot">
