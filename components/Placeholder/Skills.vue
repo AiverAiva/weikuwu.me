@@ -1,10 +1,10 @@
 <template>
-    <section id="my-stack" ref="containerRef" class="p-6 pt-12 flex flex-col justify-center">
+    <section id="my-stack" ref="containerRef" class="p-6 flex flex-col justify-center">
         <div class="container mx-auto px-10 md:px-20 pb-6">
             <ScrollReveal>
                 <div class="flex flex-col md:flex-row gap-5 md:gap-10">
                     <div>
-                        <h1 class="text-4xl font-light mb-4">Tech Stacks</h1>
+                        <h1 class="text-4xl font-light mb-4">My Stack</h1>
                     </div>
                 </div>
             </ScrollReveal>
@@ -73,7 +73,7 @@ onMounted(() => {
         scrollTrigger: {
             trigger: el,
             start: 'top 80%',
-            end: 'bottom 60%',
+            end: 'bottom 80%',
             scrub: 0.5,
         },
     }).from(slideUpEls, {
@@ -87,8 +87,8 @@ onMounted(() => {
     gsap.timeline({
         scrollTrigger: {
             trigger: el,
-            start: 'bottom 50%',
-            end: 'bottom 10%',
+            start: 'bottom 30%',
+            end: 'bottom 50%',
             scrub: 1,
         },
     }).to(el, {
