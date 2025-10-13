@@ -14,10 +14,10 @@
                     </div>
                     <!-- Hover preview image -->
                     <div v-if="selectedProject"
-                        class="max-md:hidden absolute right-0 top-0 z-[1] pointer-events-none w-[200px] xl:w-[350px] flex justify-center items-center opacity-0"
+                        class="max-md:hidden fixed right-32 -mt-48 z-[1] pointer-events-none w-[200px] xl:w-[350px]"
                         ref="imageContainer">
                         <img v-for="project in PROJECTS" :key="project.slug" :src="project.thumbnail" alt="Project"
-                            class="max-w-full h-auto object-contain rounded-lg transition-all duration-500"
+                            class="max-w-full h-auto object-contain rounded-lg transition-all duration-500 absolute inset-0"
                             :class="{ 'opacity-0': project.slug !== selectedProject }" ref="imageRefs" />
                     </div>
 
