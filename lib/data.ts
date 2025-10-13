@@ -51,6 +51,8 @@ export const MY_STACK = {
         { name: 'GitLab', icon: 'gitlab' },
         { name: 'Docker', icon: 'docker' },
         { name: 'Kubernetes', icon: 'kubernetes' },
+        { name: 'Grafana', icon: 'grafana' },
+        { name: 'Prometheus', icon: 'prometheus' },
         { name: 'GitHub Actions', icon: 'githubactions' },
         { name: 'Nginx', icon: 'nginx' },
         { name: 'AWS', icon: 'amazonwebservices' },
