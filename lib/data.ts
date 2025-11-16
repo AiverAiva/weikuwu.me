@@ -76,7 +76,7 @@ export const PROJECTS: IProject[] = [
     {
         title: "Wynnpool",
         slug: "wynnpool",
-        year: 2025,
+        year: 2024,
         description:
             "A feature-rich web utility for the MMORPG Wynncraft, providing real-time global statistics, integrations, and guild management tools. Originally built for personal use, it evolved into a comprehensive community-driven platform with a growing user base.",
         role: "Main Full-stack Developer",
@@ -123,6 +123,21 @@ export const PROJECTS: IProject[] = [
         "liveUrl": "https://earthquake.gugugaga.net/",
         "repoUrl": "https://github.com/AiverAiva/earthquake.gugugaga.net",
         "sourceCode": "https://github.com/AiverAiva/earthquake.gugugaga.net"
+    },
+    {
+        "title": "zhlinter",
+        "year": 2025,
+        "description": "A Chinese text linting and normalization tool that automatically fixes spacing between Chinese and English, punctuation, fullwidth/halfwidth characters, and formatting rules. It helps users quickly clean, standardize, and optimize written text for professional-quality typography.",
+        "role": "Main Full-stack Developer",
+        "techStack": ["Next.js", "React", "Tailwind CSS", "ZHLinter Core", "TypeScript"],
+        "thumbnail": "https://zhlinter.gugugaga.net/thumbnail.png",
+        "images": [
+            "https://zhlinter.gugugaga.net/thumbnail.png"
+        ],
+        "slug": "zhlinter",
+        "liveUrl": "https://zhlinter.gugugaga.net/",
+        "repoUrl": "https://github.com/AiverAiva/zhlinter.gugugaga.net",
+        "sourceCode": "https://github.com/AiverAiva/zhlinter.gugugaga.net"
     }
 ];
 
