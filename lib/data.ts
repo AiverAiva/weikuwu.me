@@ -26,10 +26,12 @@ export const MY_STACK = {
         { name: 'Flask', icon: 'flask' },
         { name: 'Django', icon: 'django' },
         { name: 'FastAPI', icon: 'fastapi' },
-        { name: 'REST', icon: 'swagger' }, // closest representation
+        { name: 'REST', icon: 'swagger' },
         { name: 'WebSocket', icon: 'socketdotio' },
-    ],
-    languages: [
+        // { name: 'vLLM', icon: 'vllm' },
+        { name: 'Ollama', icon: 'ollama' },
+        { name: 'PyTorch', icon: 'pytorch' },
+        { name: 'TensorFlow', icon: 'tensorflow' },
         { name: 'Python', icon: 'python' },
         { name: 'Kotlin', icon: 'kotlin' },
         { name: 'Java', icon: 'java' },
@@ -38,36 +40,51 @@ export const MY_STACK = {
         { name: 'Rust', icon: 'rust' },
         { name: 'Go', icon: 'go' },
     ],
-    databases: [
+    database: [
         { name: 'MySQL', icon: 'mysql' },
         { name: 'MongoDB', icon: 'mongodb' },
         { name: 'PostgreSQL', icon: 'postgresql' },
         { name: 'Redis', icon: 'redis' },
         { name: 'Elasticsearch', icon: 'elasticsearch' },
+        { name: 'SQLite', icon: 'sqlite' },
     ],
-    devops: [
-        { name: 'Git', icon: 'git' },
-        { name: 'GitHub', icon: 'github' },
-        { name: 'GitLab', icon: 'gitlab' },
-        { name: 'Docker', icon: 'docker' },
-        { name: 'Kubernetes', icon: 'kubernetes' },
-        { name: 'Grafana', icon: 'grafana' },
-        { name: 'Prometheus', icon: 'prometheus' },
-        { name: 'GitHub Actions', icon: 'githubactions' },
+    servers: [
         { name: 'Nginx', icon: 'nginx' },
+    ],
+    networking: [
+        { name: 'Cloudflare', icon: 'cloudflare' },
+        { name: 'WireGuard', icon: 'wireguard' },
+    ],
+    'cloud infra': [
         { name: 'AWS', icon: 'amazonwebservices' },
         { name: 'GCP', icon: 'googlecloud' },
-        { name: 'Heroku', icon: 'heroku' },
+        // { name: 'Heroku', icon: 'heroku' },
         { name: 'Vercel', icon: 'vercel' },
         { name: 'Railway', icon: 'railway' },
         { name: 'Cloudflare', icon: 'cloudflare' },
-        { name: 'npm', icon: 'npm' },
-        { name: 'Yarn', icon: 'yarn' },
+        // { name: 'Zeabur', icon: 'zeabur' },
     ],
-    ml: [
-        { name: 'PyTorch', icon: 'pytorch' },
-        { name: 'TensorFlow', icon: 'tensorflow' },
+    'ci/cd': [
+        { name: 'Git', icon: 'git' },
+        { name: 'GitHub', icon: 'github' },
+        { name: 'GitLab', icon: 'gitlab' },
+        { name: 'GitHub Actions', icon: 'githubactions' },
     ],
+    // security: [],
+    container: [
+        { name: 'Docker', icon: 'docker' },
+        // { name: 'Docker Compose', icon: 'docker' },
+        { name: 'Kubernetes', icon: 'kubernetes' },
+    ],
+    cdn: [
+        // { name: 'Cloudflare', icon: 'cloudflare' },
+        { name: 'Cloudflare R2', icon: 'cloudflare' },
+    ],
+    monitoring: [
+        { name: 'Grafana', icon: 'grafana' },
+        { name: 'Prometheus', icon: 'prometheus' },
+    ],
+    // backups: [],
 }
 
 
