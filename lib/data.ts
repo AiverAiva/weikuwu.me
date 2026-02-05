@@ -61,7 +61,7 @@ export const MY_STACK = {
         // { name: 'Heroku', icon: 'heroku' },
         { name: 'Vercel', icon: 'vercel' },
         { name: 'Railway', icon: 'railway' },
-        { name: 'Cloudflare', icon: 'cloudflare' },
+        // { name: 'Cloudflare', icon: 'cloudflare' },
         // { name: 'Zeabur', icon: 'zeabur' },
     ],
     'ci/cd': [
