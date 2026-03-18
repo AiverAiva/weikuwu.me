@@ -52,6 +52,7 @@ function getIconUrl(name: string, icon: string) {
         'CSS3': '/logo/css.webp',
         'Java': '/logo/java.png',
         'AWS': '/logo/aws.webp',
+        'vLLM': '/logo/vllm.png',
     }
 
     if (customIcons[name]) {

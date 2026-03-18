@@ -28,7 +28,7 @@ export const MY_STACK = {
         { name: 'FastAPI', icon: 'fastapi' },
         { name: 'REST', icon: 'swagger' },
         { name: 'WebSocket', icon: 'socketdotio' },
-        // { name: 'vLLM', icon: 'vllm' },
+        { name: 'vLLM', icon: 'vllm' },
         { name: 'Ollama', icon: 'ollama' },
         { name: 'PyTorch', icon: 'pytorch' },
         { name: 'TensorFlow', icon: 'tensorflow' },
