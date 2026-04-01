@@ -8,7 +8,7 @@
                     </div>
                 </div>
             </ScrollReveal>
-            <div class="space-y-20">
+            <div class="space-y-14">
                 <div v-for="(value, key) in MY_STACK" :key="key">
                     <ScrollReveal>
                         <div class="grid sm:grid-cols-12">
@@ -19,7 +19,7 @@
                                 </p>
                             </div>
 
-                            <div class="sm:col-span-7 flex gap-x-11 gap-y-9 flex-wrap">
+                            <div class="sm:col-span-7 flex gap-x-11 gap-y-6 flex-wrap">
                                 <div v-for="item in value" :key="item.name"
                                     class="slide-up flex gap-3.5 items-center leading-none">
                                     <img :src="getIconUrl(item.name, item.icon)" :alt="item.name" width="40" height="40"
